@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Victor Garcia\\OneDrive\\Escritorio\\DAM2\\M6\\UF2\\M6PoligonEricGarcia_JesusSaez\\M6Poligon\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{59BAF32F-18D8-400C-9DD7-7E882A9FE334}|M6Poligon\\M6Poligon.csproj|c:\\users\\victor garcia\\onedrive\\escritorio\\dam2\\m6\\uf2\\m6poligonericgarcia_jesussaez\\m6poligon\\m6poligon\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{59BAF32F-18D8-400C-9DD7-7E882A9FE334}|M6Poligon\\M6Poligon.csproj|solutionrelative:m6poligon\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Victor Garcia\\OneDrive\\Escritorio\\DAM2\\M6\\UF2\\M6PoligonEricGarcia_JesusSaez\\M6Poligon\\M6Poligon\\Form1.cs",
+              "RelativeDocumentMoniker": "M6Poligon\\Form1.cs",
+              "ToolTip": "C:\\Users\\Victor Garcia\\OneDrive\\Escritorio\\DAM2\\M6\\UF2\\M6PoligonEricGarcia_JesusSaez\\M6Poligon\\M6Poligon\\Form1.cs [Dise\u00F1o]",
+              "RelativeToolTip": "M6Poligon\\Form1.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T18:21:09.814Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
