@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CLASSES;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -39,7 +40,7 @@ namespace M6Poligon.CLASSES
             pnl.Size = new Size(Width + 5, Height + 5);
             pnl.Location = posVertex;
             pnl.Paint += new PaintEventHandler(ferCercle);
-            frmPare.Controls.Add(pnl);
+            pnlPare.Controls.Add(pnl);
             pnl.BringToFront();
         }
 
@@ -63,6 +64,19 @@ namespace M6Poligon.CLASSES
             double b = Height / 2.0;
             // Área = π * a * b
             return Math.PI * a * b;
+        }
+        public override void elimina()
+        {
+
+        }
+        public override Double Perimetre()
+        {
+            return 2;
+        }
+        public override bool getPoligons(ClBDSqlServer bd, int idPoligon)
+        {
+            Boolean xb = false;
+            return xb;
         }
 
     }

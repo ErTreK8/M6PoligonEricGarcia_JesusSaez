@@ -34,6 +34,7 @@
             this.cbGrup = new System.Windows.Forms.ComboBox();
             this.dgPersonatges = new System.Windows.Forms.DataGridView();
             this.lbPersonatges = new System.Windows.Forms.Label();
+            this.pnlFormas = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgPersonatges)).BeginInit();
             this.SuspendLayout();
             // 
@@ -114,18 +115,26 @@
             this.lbPersonatges.Text = "Poligons";
             this.lbPersonatges.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pnlFormas
+            // 
+            this.pnlFormas.Location = new System.Drawing.Point(568, 105);
+            this.pnlFormas.Name = "pnlFormas";
+            this.pnlFormas.Size = new System.Drawing.Size(499, 401);
+            this.pnlFormas.TabIndex = 13;
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1115, 745);
+            this.Controls.Add(this.pnlFormas);
             this.Controls.Add(this.lbInfo);
             this.Controls.Add(this.lbGrup);
             this.Controls.Add(this.cbGrup);
             this.Controls.Add(this.dgPersonatges);
             this.Controls.Add(this.lbPersonatges);
             this.Name = "FrmMain";
-            this.Text = "Form1";
+            this.Text = "Poligons";
             ((System.ComponentModel.ISupportInitialize)(this.dgPersonatges)).EndInit();
             this.ResumeLayout(false);
 
@@ -138,6 +147,7 @@
         private System.Windows.Forms.ComboBox cbGrup;
         private System.Windows.Forms.DataGridView dgPersonatges;
         private System.Windows.Forms.Label lbPersonatges;
+        private System.Windows.Forms.Panel pnlFormas;
     }
 }
 

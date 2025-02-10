@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CLASSES\ClBDSqlServer.cs" />
     <Compile Include="CLASSES\ClCercle.cs" />
     <Compile Include="CLASSES\ClElipse.cs" />
     <Compile Include="CLASSES\ClHexagono.cs" />

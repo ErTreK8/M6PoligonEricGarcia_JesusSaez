@@ -8,55 +8,80 @@ using System.Drawing;
 using System.Reflection;
 using System.Linq.Expressions;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
+using System.Data;
+using CLASSES;
 
 namespace M6Poligon.CLASSES
 {
     public abstract class ClPoligon
     {
-        
-        protected Form frmPare { get; set; }                    // Form on es dibuixarà el polígon
+        protected Panel pnlPare { get; set; }                    // Form on es dibuixarà el polígon
         protected private Panel pnl { get; set; } = new Panel(); // panell dins el qual es dibuixa el polígon
         protected Point posCentre { get; set; }                // posició del centre del Panel   
-        protected Color colorInterior { get; set; }             // color de l'interior
-        protected Boolean teInterior { get; set; }              // indica si té interior
+        public Color colorInterior { get; set; }             // color de l'interior
+        public Boolean ple { get; set; }              // indica si té interior
+        public int Id { get; set; }
+        public String Nom { get; set; }
+        public String Forma { get; set; }
+        public ClBDSqlServer bd { get; set; }
 
-        
-        protected ClPoligon(Form xfrmMain, Point xpos)
+        // Declarem constructors genèrics per a totes les subclasses que es derivin d'aquesta
+        // Quan s'executi el constructor de qualsevol de les subclasses aquest s'executarà abans
+
+        // Constructor 1 - No hi ha color interior
+        protected ClPoligon(Panel xpnlPare)
         {
-            frmPare = xfrmMain;
+            pnlPare = xpnlPare;
             colorInterior = Color.Empty;
-            teInterior = false;
-            posCentre = xpos;
-            iniPanell();
+            ple = false;
+            posCentre = new Point(pnlPare.Width / 2, pnlPare.Height / 2);
         }
 
         // Constructor 2 - Hi ha color interior
-        protected ClPoligon(Form xfrmMain, Point xpos, Color xcolor)
+        protected ClPoligon(Panel xpnlPare, Color xcolor)
         {
-            frmPare = xfrmMain;
+            pnlPare = xpnlPare;
             colorInterior = xcolor;
-            teInterior = true;
-            posCentre = xpos;
-            iniPanell();
+            ple = true;
+            posCentre = new Point(pnlPare.Width / 2, pnlPare.Height / 2);
         }
 
-        protected private void iniPanell()
+        public ClPoligon(ClBDSqlServer xbd, int xid)
         {
-            pnl.Click += new EventHandler(nouColor);        // si es fa clic a la figura canvia el color
+            Id = xid;
+            bd = xbd;
         }
+        //CONSTRUCTOR PER FER L'INSERT
 
-        protected private void nouColor(object sender, EventArgs e)
+        public ClPoligon(ClBDSqlServer xbd, String xnom, String xforma, String xcolor, int xple)
         {
-            Random R = new Random();
-            List<Color> llColors = new List<Color> { Color.Red, Color.Green, Color.Blue, Color.Yellow, Color.Cyan, Color.Magenta, Color.Black, Color.White, Color.Gray, Color.Orange, Color.Pink, Color.Purple, Color.Brown, Color.Lime, Color.Teal, Color.Olive, Color.Navy, Color.Maroon, Color.Silver, Color.Goldenrod, Color.DarkRed, Color.DarkGreen, Color.DarkBlue, Color.DarkCyan, Color.DarkMagenta, Color.DarkGray, Color.LightGray, Color.LightPink, Color.LightBlue, Color.LightGreen, Color.LightYellow, Color.LightCyan, Color.LightCoral, Color.LightSeaGreen, Color.LightGoldenrodYellow, Color.MidnightBlue, Color.MistyRose, Color.LavenderBlush, Color.Honeydew, Color.ForestGreen, Color.Fuchsia, Color.AliceBlue, Color.AntiqueWhite, Color.Aquamarine, Color.Beige, Color.Bisque, Color.BlanchedAlmond, Color.Chartreuse, Color.Coral, Color.CornflowerBlue, Color.Cornsilk };
 
-            if (colorInterior != Color.Empty)
+            DataSet xdset = new DataSet();
+            String xsql = $"INSERT INTO Poligon(Nom, Forma, Color, Ple) VALUES('{xnom}', '{xforma}', '{xcolor}', {xple})";
+
+            if (xbd.executarOrdre(xsql))
             {
-                colorInterior = llColors[R.Next(0, llColors.Count)];        // busquem un nou color aleatòriament
-                pnl.Refresh();  // redibuixem el Panel
+                // Si la inserció ha anat bé recuperem l'Id generat perquè el necessitem per a fer la inserció en la taula de la subclasse
+                // ALERTA!!!! En un entorn multiusuari, aquesta operació s'hauria de fer amb una TRANSACTION per a garantir que el resultat és correcte
+                xsql = "SELECT TOP 1 Id FROM Poligon ORDER BY Id DESC";
+                //CAMBIAR A ID AUTOINCREMENTAL???????
+                xbd.Consulta(xsql, ref xdset);
+                if (xdset.Tables[0].Rows.Count == 0)
+                {
+                    Id = -1;
+                    MessageBox.Show("No s'ha pogut recuperar l'Id del nou polígon", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    Id = (int)xdset.Tables[0].Rows[0].ItemArray[0];
+                }
             }
         }
 
-        public abstract Double Area();      // retorna l'àrea de la figura mesurada en "pixels quadrats"
+
+        public abstract void elimina();
+        public abstract Double Area();
+        public abstract Double Perimetre();
+        public abstract bool getPoligons(ClBDSqlServer bd, int idPoligon);
     }
 }

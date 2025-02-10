@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CLASSES;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -41,7 +42,7 @@ namespace M6Poligon.CLASSES
             pnl.Size = new Size(Width, Height);
             pnl.Location = posVertex;
             pnl.Paint += new PaintEventHandler(ferTriangleRectangle);
-            frmPare.Controls.Add(pnl);
+            pnlPare.Controls.Add(pnl);
             pnl.BringToFront();
         }
 
@@ -70,6 +71,19 @@ namespace M6Poligon.CLASSES
         public override Double Area()
         {
             return (Width * Height / 2.0);
+        }
+        public override void elimina()
+        {
+
+        }
+        public override Double Perimetre()
+        {
+            return 2;
+        }
+        public override bool getPoligons(ClBDSqlServer bd, int idPoligon)
+        {
+            Boolean xb = false;
+            return xb;
         }
     }
 }
