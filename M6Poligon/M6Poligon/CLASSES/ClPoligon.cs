@@ -11,6 +11,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
 using System.Data;
 using CLASSES;
 using System.Globalization;
+using System.Xml.Linq;
 
 namespace M6Poligon.CLASSES
 {
@@ -80,6 +81,5 @@ namespace M6Poligon.CLASSES
         public abstract void elimina();
         public abstract Double Area();
         public abstract Double Perimetre();
-        public abstract bool getPoligons(ClBDSqlServer bd, int idPoligon);
     }
 }
