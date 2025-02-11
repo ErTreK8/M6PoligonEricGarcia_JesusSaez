@@ -33,8 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -57,14 +66,71 @@
     <Compile Include="CLASSES\ClRombo.cs" />
     <Compile Include="CLASSES\ClTriangleIsosceles.cs" />
     <Compile Include="CLASSES\ClTriangleRectangle.cs" />
+    <Compile Include="FORMS\FrmAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\FrmAdd.Designer.cs">
+      <DependentUpon>FrmAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Poligons.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Poligons.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Poligons.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Poligons.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Poligons.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Poligons.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tbCercle.cs">
+      <DependentUpon>Poligons.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbElipse.cs">
+      <DependentUpon>Poligons.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbHexagons.cs">
+      <DependentUpon>Poligons.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbOctagons.cs">
+      <DependentUpon>Poligons.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbPentagons.cs">
+      <DependentUpon>Poligons.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbPoligons.cs">
+      <DependentUpon>Poligons.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbQuadrat.cs">
+      <DependentUpon>Poligons.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbRectangle.cs">
+      <DependentUpon>Poligons.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbRombes.cs">
+      <DependentUpon>Poligons.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbTriangleIsosceles.cs">
+      <DependentUpon>Poligons.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbTriangleRectangle.cs">
+      <DependentUpon>Poligons.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FORMS\FrmAdd.resx">
+      <DependentUpon>FrmAdd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -77,6 +143,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EntityDeploy Include="Poligons.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Poligons.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="packages.config" />
+    <None Include="Poligons.edmx.diagram">
+      <DependentUpon>Poligons.edmx</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -89,6 +163,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Poligons.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Poligons.Context.cs</LastGenOutput>
+      <DependentUpon>Poligons.edmx</DependentUpon>
+    </Content>
+    <Content Include="Poligons.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Poligons.edmx</DependentUpon>
+      <LastGenOutput>Poligons.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

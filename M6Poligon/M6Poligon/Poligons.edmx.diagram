@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ba482645d8004311922d4471e2ae7f61" Name="Diagram1">
+        <EntityTypeShape EntityType="bdPoligonsModel.tbCercle" Width="1.5" PointX="3" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdPoligonsModel.tbElipse" Width="1.5" PointX="3" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdPoligonsModel.tbHexagons" Width="1.5" PointX="3" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdPoligonsModel.tbOctagons" Width="1.5" PointX="3" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdPoligonsModel.tbPentagons" Width="1.5" PointX="3" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdPoligonsModel.tbPoligons" Width="1.5" PointX="0.75" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdPoligonsModel.tbQuadrat" Width="1.5" PointX="3" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdPoligonsModel.tbRectangle" Width="1.5" PointX="3" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdPoligonsModel.tbRombes" Width="1.5" PointX="3" PointY="20.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdPoligonsModel.tbTriangleIsosceles" Width="1.5" PointX="3" PointY="23" IsExpanded="true" />
+        <EntityTypeShape EntityType="bdPoligonsModel.tbTriangleRectangle" Width="1.5" PointX="3" PointY="25.75" IsExpanded="true" />
+        <AssociationConnector Association="bdPoligonsModel.FK__tbCercle__idPoli__4316F928" ManuallyRouted="false" />
+        <AssociationConnector Association="bdPoligonsModel.FK__tbElipse__idPoli__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="bdPoligonsModel.FK__tbHexagon__idPol__59FA5E80" ManuallyRouted="false" />
+        <AssociationConnector Association="bdPoligonsModel.FK__tbOctagon__idPol__5DCAEF64" ManuallyRouted="false" />
+        <AssociationConnector Association="bdPoligonsModel.FK__tbPentago__idPol__5629CD9C" ManuallyRouted="false" />
+        <AssociationConnector Association="bdPoligonsModel.FK__tbQuadrat__idPol__3B75D760" ManuallyRouted="false" />
+        <AssociationConnector Association="bdPoligonsModel.FK__tbRectang__idPol__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="bdPoligonsModel.FK__tbRombes__idPoli__52593CB8" ManuallyRouted="false" />
+        <AssociationConnector Association="bdPoligonsModel.FK__tbTriangl__idPol__4AB81AF0" ManuallyRouted="false" />
+        <AssociationConnector Association="bdPoligonsModel.FK__tbTriangl__idPol__4E88ABD4" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
