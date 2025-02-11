@@ -18,7 +18,7 @@ namespace M6Poligon
     {
         String cadenaConnexio = @"Data Source=localhost;Initial Catalog=bdPoligons;Integrated Security=True";
         ClBDSqlServer bd;
-        //DataSet dset;
+        DataSet dset;
         Boolean tots = true;
         public FrmMain()
         {
@@ -28,6 +28,7 @@ namespace M6Poligon
         private void FrmMain_Load(object sender, EventArgs e)
         {
             bd = new ClBDSqlServer(cadenaConnexio);
+            dset = new DataSet();
             if (bd.Connectar())
             {
                 cbGrup.SelectedIndex = 0;
@@ -43,7 +44,6 @@ namespace M6Poligon
         private void getDades(bool xbTots)
         {
             String xsql = "";
-            DataSet dset = new DataSet();
 
             if (tots)
             {
@@ -51,7 +51,7 @@ namespace M6Poligon
             }
             else
             {
-                xsql = $"SELECT * from tbPoligon p inner join tb{cbGrup.SelectedIndex.ToString()} t on t.idPoligon=p.idPoligon ORDER BY nombre";
+                xsql = $"SELECT * from tbPoligon p inner join tb{cbGrup.SelectedIndex.ToString().Replace(" ", "")} t on t.idPoligon=p.idPoligon ORDER BY nombre";
             }
 
             
