@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="bdPoligonsModelStoreContainer" CdmEntityContainer="bdPoligonsEntities">
+    <EntitySetMapping Name="tbCercle">
+      <EntityTypeMapping TypeName="bdPoligonsModel.tbCercle">
+        <MappingFragment StoreEntitySet="tbCercle">
+          <ScalarProperty Name="idCercle" ColumnName="idCercle" />
+          <ScalarProperty Name="idPoligon" ColumnName="idPoligon" />
+          <ScalarProperty Name="mida" ColumnName="mida" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbElipse">
+      <EntityTypeMapping TypeName="bdPoligonsModel.tbElipse">
+        <MappingFragment StoreEntitySet="tbElipse">
+          <ScalarProperty Name="idElipse" ColumnName="idElipse" />
+          <ScalarProperty Name="idPoligon" ColumnName="idPoligon" />
+          <ScalarProperty Name="x" ColumnName="x" />
+          <ScalarProperty Name="y" ColumnName="y" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbHexagons">
+      <EntityTypeMapping TypeName="bdPoligonsModel.tbHexagons">
+        <MappingFragment StoreEntitySet="tbHexagons">
+          <ScalarProperty Name="idHexagons" ColumnName="idHexagons" />
+          <ScalarProperty Name="idPoligon" ColumnName="idPoligon" />
+          <ScalarProperty Name="mida" ColumnName="mida" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbOctagons">
+      <EntityTypeMapping TypeName="bdPoligonsModel.tbOctagons">
+        <MappingFragment StoreEntitySet="tbOctagons">
+          <ScalarProperty Name="idOctagons" ColumnName="idOctagons" />
+          <ScalarProperty Name="idPoligon" ColumnName="idPoligon" />
+          <ScalarProperty Name="mida" ColumnName="mida" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbPentagons">
+      <EntityTypeMapping TypeName="bdPoligonsModel.tbPentagons">
+        <MappingFragment StoreEntitySet="tbPentagons">
+          <ScalarProperty Name="idPentagons" ColumnName="idPentagons" />
+          <ScalarProperty Name="idPoligon" ColumnName="idPoligon" />
+          <ScalarProperty Name="mida" ColumnName="mida" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbPoligons">
+      <EntityTypeMapping TypeName="bdPoligonsModel.tbPoligons">
+        <MappingFragment StoreEntitySet="tbPoligons">
+          <ScalarProperty Name="idPoligon" ColumnName="idPoligon" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="color" ColumnName="color" />
+          <ScalarProperty Name="forma" ColumnName="forma" />
+          <ScalarProperty Name="ple" ColumnName="ple" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbQuadrat">
+      <EntityTypeMapping TypeName="bdPoligonsModel.tbQuadrat">
+        <MappingFragment StoreEntitySet="tbQuadrat">
+          <ScalarProperty Name="idQuadrat" ColumnName="idQuadrat" />
+          <ScalarProperty Name="idPoligon" ColumnName="idPoligon" />
+          <ScalarProperty Name="mida" ColumnName="mida" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbRectangle">
+      <EntityTypeMapping TypeName="bdPoligonsModel.tbRectangle">
+        <MappingFragment StoreEntitySet="tbRectangle">
+          <ScalarProperty Name="idRectangle" ColumnName="idRectangle" />
+          <ScalarProperty Name="idPoligon" ColumnName="idPoligon" />
+          <ScalarProperty Name="x" ColumnName="x" />
+          <ScalarProperty Name="y" ColumnName="y" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbRombes">
+      <EntityTypeMapping TypeName="bdPoligonsModel.tbRombes">
+        <MappingFragment StoreEntitySet="tbRombes">
+          <ScalarProperty Name="idRombes" ColumnName="idRombes" />
+          <ScalarProperty Name="idPoligon" ColumnName="idPoligon" />
+          <ScalarProperty Name="x" ColumnName="x" />
+          <ScalarProperty Name="y" ColumnName="y" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbTriangleIsosceles">
+      <EntityTypeMapping TypeName="bdPoligonsModel.tbTriangleIsosceles">
+        <MappingFragment StoreEntitySet="tbTriangleIsosceles">
+          <ScalarProperty Name="idTriangleIsosceles" ColumnName="idTriangleIsosceles" />
+          <ScalarProperty Name="idPoligon" ColumnName="idPoligon" />
+          <ScalarProperty Name="x" ColumnName="x" />
+          <ScalarProperty Name="y" ColumnName="y" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbTriangleRectangle">
+      <EntityTypeMapping TypeName="bdPoligonsModel.tbTriangleRectangle">
+        <MappingFragment StoreEntitySet="tbTriangleRectangle">
+          <ScalarProperty Name="idTriangleRectangle" ColumnName="idTriangleRectangle" />
+          <ScalarProperty Name="idPoligon" ColumnName="idPoligon" />
+          <ScalarProperty Name="x" ColumnName="x" />
+          <ScalarProperty Name="y" ColumnName="y" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

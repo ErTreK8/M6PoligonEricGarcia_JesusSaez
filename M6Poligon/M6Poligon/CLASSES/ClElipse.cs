@@ -1,6 +1,7 @@
 ﻿using CLASSES;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -96,10 +97,25 @@ namespace M6Poligon.CLASSES
             // Jaume no me pongas mates porfa q dan pereza :(
             return Math.PI * (3 * (a + b) - Math.Sqrt((3 * a + b) * (a + 3 * b)));
         }
-        public override bool getPoligons(ClBDSqlServer bd, int idPoligon)
-        {
-            Boolean xb = false;
-            return xb;
-        }
+        //public bool getPoligons(ref int xancho, ref int xaltura)
+        //{
+        //    Boolean xb = false;
+        //    String xsql = "";
+        //    DataSet xdset = new DataSet();
+
+        //    xsql = $"SELECT * FROM tbRectangles WHERE id = '{Id}'";
+
+        //    bd.Consulta(xsql, ref xdset);
+
+        //    if (xdset.Tables[0].Rows.Count > 0)
+        //    {
+        //        this.Id = (int)xdset.Tables[0].Rows[0].ItemArray[1];
+        //        xancho = (int)xdset.Tables[0].Rows[0].ItemArray[2];
+        //        xaltura = (int)xdset.Tables[0].Rows[0].ItemArray[3];
+        //        xb = true;
+        //    }
+
+        //    return xb;
+        //}
     }
 }

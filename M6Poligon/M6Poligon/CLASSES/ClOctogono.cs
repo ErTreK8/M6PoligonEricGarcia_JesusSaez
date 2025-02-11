@@ -1,6 +1,7 @@
 ﻿using CLASSES;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -80,6 +81,25 @@ namespace M6Poligon.CLASSES
         public override double Area() => 2 * (1 + Math.Sqrt(2)) * Math.Pow(mida, 2);
         public override double Perimetre() => 8 * mida;
         public override void elimina() { }
-        public override bool getPoligons(ClBDSqlServer bd, int idPoligon) => false;
+        //public bool getPoligons(ref int xancho, ref int xaltura)
+        //{
+        //    Boolean xb = false;
+        //    String xsql = "";
+        //    DataSet xdset = new DataSet();
+
+        //    xsql = $"SELECT * FROM tbRectangles WHERE id = '{Id}'";
+
+        //    bd.Consulta(xsql, ref xdset);
+
+        //    if (xdset.Tables[0].Rows.Count > 0)
+        //    {
+        //        this.Id = (int)xdset.Tables[0].Rows[0].ItemArray[1];
+        //        xancho = (int)xdset.Tables[0].Rows[0].ItemArray[2];
+        //        xaltura = (int)xdset.Tables[0].Rows[0].ItemArray[3];
+        //        xb = true;
+        //    }
+
+        //    return xb;
+        //}
     }
 }

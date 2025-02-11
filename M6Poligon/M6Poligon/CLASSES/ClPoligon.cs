@@ -62,7 +62,7 @@ namespace M6Poligon.CLASSES
 
             if (xbd.executarOrdre(xsql))
             {
-                xsql = "SELECT TOP 1 id FROM Poligonos ORDER BY id DESC";
+                xsql = "SELECT TOP 1 id FROM tbPoligon ORDER BY id DESC";
                 xbd.Consulta(xsql, ref xdset);
 
                 if (xdset.Tables[0].Rows.Count == 0)
@@ -76,7 +76,6 @@ namespace M6Poligon.CLASSES
                 }
             }
         }
-
 
         public abstract void elimina();
         public abstract Double Area();

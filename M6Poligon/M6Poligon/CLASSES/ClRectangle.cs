@@ -104,7 +104,7 @@ namespace M6Poligon.CLASSES
             String xsql = "";
             DataSet xdset = new DataSet();
 
-            xsql = $"SELECT * FROM tbRectangles WHERE id = '{Id}'";
+            xsql = $"SELECT * FROM tbRectangle WHERE id = '{Id}'";
 
             bd.Consulta(xsql, ref xdset);
 

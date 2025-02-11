@@ -68,6 +68,6 @@ namespace M6Poligon.CLASSES
         public override Double Area() => (ancho * altura) / 2.0;
         public override Double Perimetre() => ancho + 2 * Math.Sqrt(Math.Pow(altura, 2) + Math.Pow(ancho / 2.0, 2));
         public override void elimina() { }
-        public override bool getPoligons(ClBDSqlServer bd, int idPoligon) => false;
+        public bool getPoligons(ClBDSqlServer bd, int idPoligon) => false;
     }
 }

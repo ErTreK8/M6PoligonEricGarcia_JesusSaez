@@ -1,6 +1,7 @@
 ﻿using CLASSES;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -27,6 +28,10 @@ namespace M6Poligon.CLASSES
             dibuixarFigura();
         }
 
+        public ClCercle(ClBDSqlServer xbd, int xid, ref int xmida) : base(xbd, xid)
+        {
+            getPoligons(ref xmida);
+        }
 
         // constructor Con color
         public ClCercle(Panel xpnlPare, Color xcolor, int xmida) : base(xpnlPare, xcolor)
@@ -92,9 +97,23 @@ namespace M6Poligon.CLASSES
 
             return 2*Math.PI*radio;
         }
-        public override bool getPoligons(ClBDSqlServer bd, int idPoligon)
+        public bool getPoligons(ref int xmida)
         {
             Boolean xb = false;
+            String xsql = "";
+            DataSet xdset = new DataSet();
+
+            xsql = $"SELECT * FROM tbCercle WHERE id = '{Id}'";
+
+            bd.Consulta(xsql, ref xdset);
+
+            if (xdset.Tables[0].Rows.Count > 0)
+            {
+                this.Id = (int)xdset.Tables[0].Rows[0].ItemArray[1];
+                xmida = (int)xdset.Tables[0].Rows[0].ItemArray[2];
+                xb = true;
+            }
+
             return xb;
         }
 

@@ -113,10 +113,25 @@ namespace M6Poligon.CLASSES
         //    return xb;
         //}
 
-        public override bool getPoligons(ClBDSqlServer bd, int idPoligon)
-        {
-            Boolean xb = false;
-            return xb;
-        }
+        //public bool getPoligons(ref int xancho, ref int xaltura)
+        //{
+        //    Boolean xb = false;
+        //    String xsql = "";
+        //    DataSet xdset = new DataSet();
+
+        //    xsql = $"SELECT * FROM tbRectangles WHERE id = '{Id}'";
+
+        //    bd.Consulta(xsql, ref xdset);
+
+        //    if (xdset.Tables[0].Rows.Count > 0)
+        //    {
+        //        this.Id = (int)xdset.Tables[0].Rows[0].ItemArray[1];
+        //        xancho = (int)xdset.Tables[0].Rows[0].ItemArray[2];
+        //        xaltura = (int)xdset.Tables[0].Rows[0].ItemArray[3];
+        //        xb = true;
+        //    }
+
+        //    return xb;
+        //}
     }
 }

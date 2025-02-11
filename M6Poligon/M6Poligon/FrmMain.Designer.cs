@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbInfo = new System.Windows.Forms.Label();
             this.lbGrup = new System.Windows.Forms.Label();
             this.cbGrup = new System.Windows.Forms.ComboBox();
@@ -68,29 +68,30 @@
             this.cbGrup.FormattingEnabled = true;
             this.cbGrup.Items.AddRange(new object[] {
             "Tots",
-            "Balrogs",
-            "Elfs",
-            "Hobbits",
-            "Humans",
-            "Mags",
-            "Nans",
-            "Nazguls",
-            "Orcs",
-            "Trolls",
-            "UrukHais"});
+            "Cercle",
+            "Elipse",
+            "Hexagon",
+            "Octagon",
+            "Pentagon",
+            "Quadrat",
+            "Rectangle",
+            "Rombe",
+            "Triangle isosceles",
+            "Triangle rectangle"});
             this.cbGrup.Location = new System.Drawing.Point(142, 21);
             this.cbGrup.Name = "cbGrup";
             this.cbGrup.Size = new System.Drawing.Size(343, 24);
             this.cbGrup.TabIndex = 10;
+            this.cbGrup.SelectedIndexChanged += new System.EventHandler(this.cbGrup_SelectedIndexChanged);
             // 
             // dgPersonatges
             // 
             this.dgPersonatges.AllowUserToAddRows = false;
             this.dgPersonatges.AllowUserToDeleteRows = false;
             this.dgPersonatges.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Yellow;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.dgPersonatges.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.dgPersonatges.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgPersonatges.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgPersonatges.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgPersonatges.Location = new System.Drawing.Point(12, 90);
