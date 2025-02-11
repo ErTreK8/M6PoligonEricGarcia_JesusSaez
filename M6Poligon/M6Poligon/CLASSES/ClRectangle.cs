@@ -1,6 +1,7 @@
 ﻿using CLASSES;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -28,7 +29,6 @@ namespace M6Poligon.CLASSES
             dibuixarFigura();
         }
 
-
         // constructor Con color
         public ClRectangle(Panel xpnlPare, Color xcolor, int xaltura, int xancho) : base(xpnlPare, xcolor)
         {
@@ -37,7 +37,11 @@ namespace M6Poligon.CLASSES
             dibuixarFigura();
         }
 
-
+        // si fuera quadrado solo le mandas la mida por ref
+        public ClRectangle(ClBDSqlServer xbd, int xid, ref int xaltura, ref int xancho) : base(xbd, xid)
+        {
+            getPoligons(ref xancho, ref xaltura);
+        }
 
         private void dibuixarFigura()
         {
@@ -94,32 +98,24 @@ namespace M6Poligon.CLASSES
         }
 
 
-
-        //JESUS TIENES QUE HACERLO ASI MIRALO CHILL
-
-
-        //public override bool getPoligono(ClBd bd, int id)
-        //{
-        //    Boolean xb = false;
-        //    String xsql = "";
-        //    DataSet xdset = new DataSet();
-
-        //    xsql = $"SELECT * FROM Rectangles WHERE id = '{id}'";
-
-        //    if (bd.getDades(xsql, xdset) && xdset.Tables[0].Rows.Count > 0)
-        //    {
-        //        this.Id = (int)xdset.Tables[0].Rows[0].ItemArray[0];
-        //        this.Base = (int)xdset.Tables[0].Rows[0].ItemArray[1];
-        //        this.Altura = (int)xdset.Tables[0].Rows[0].ItemArray[2];
-        //        xb = true;
-        //    }
-
-        //    return xb;
-        //}
-
-        public override bool getPoligons(ClBDSqlServer bd, int idPoligon)
+        public bool getPoligons(ref int xancho, ref int xaltura)
         {
             Boolean xb = false;
+            String xsql = "";
+            DataSet xdset = new DataSet();
+
+            xsql = $"SELECT * FROM tbRectangles WHERE id = '{Id}'";
+
+            bd.Consulta(xsql, ref xdset);
+
+            if (xdset.Tables[0].Rows.Count > 0)
+            {
+                this.Id = (int)xdset.Tables[0].Rows[0].ItemArray[1];
+                xancho = (int)xdset.Tables[0].Rows[0].ItemArray[2];
+                xaltura = (int)xdset.Tables[0].Rows[0].ItemArray[3];
+                xb = true;
+            }
+
             return xb;
         }
 
