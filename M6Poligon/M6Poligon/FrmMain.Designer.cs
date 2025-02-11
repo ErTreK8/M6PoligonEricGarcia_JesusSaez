@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbInfo = new System.Windows.Forms.Label();
             this.lbGrup = new System.Windows.Forms.Label();
             this.cbGrup = new System.Windows.Forms.ComboBox();
-            this.dgPersonatges = new System.Windows.Forms.DataGridView();
+            this.dgPoligons = new System.Windows.Forms.DataGridView();
             this.lbPersonatges = new System.Windows.Forms.Label();
             this.pnlFormas = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.dgPersonatges)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgPoligons)).BeginInit();
             this.SuspendLayout();
             // 
             // lbInfo
@@ -84,25 +84,26 @@
             this.cbGrup.TabIndex = 10;
             this.cbGrup.SelectedIndexChanged += new System.EventHandler(this.cbGrup_SelectedIndexChanged);
             // 
-            // dgPersonatges
+            // dgPoligons
             // 
-            this.dgPersonatges.AllowUserToAddRows = false;
-            this.dgPersonatges.AllowUserToDeleteRows = false;
-            this.dgPersonatges.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Yellow;
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            this.dgPersonatges.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgPersonatges.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgPersonatges.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgPersonatges.Location = new System.Drawing.Point(12, 90);
-            this.dgPersonatges.MultiSelect = false;
-            this.dgPersonatges.Name = "dgPersonatges";
-            this.dgPersonatges.ReadOnly = true;
-            this.dgPersonatges.RowHeadersVisible = false;
-            this.dgPersonatges.RowHeadersWidth = 51;
-            this.dgPersonatges.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgPersonatges.Size = new System.Drawing.Size(535, 644);
-            this.dgPersonatges.TabIndex = 9;
+            this.dgPoligons.AllowUserToAddRows = false;
+            this.dgPoligons.AllowUserToDeleteRows = false;
+            this.dgPoligons.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dgPoligons.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgPoligons.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgPoligons.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgPoligons.Location = new System.Drawing.Point(12, 90);
+            this.dgPoligons.MultiSelect = false;
+            this.dgPoligons.Name = "dgPoligons";
+            this.dgPoligons.ReadOnly = true;
+            this.dgPoligons.RowHeadersVisible = false;
+            this.dgPoligons.RowHeadersWidth = 51;
+            this.dgPoligons.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgPoligons.Size = new System.Drawing.Size(535, 644);
+            this.dgPoligons.TabIndex = 9;
+            this.dgPoligons.SelectionChanged += new System.EventHandler(this.dgPoligons_SelectionChanged);
             // 
             // lbPersonatges
             // 
@@ -132,12 +133,12 @@
             this.Controls.Add(this.lbInfo);
             this.Controls.Add(this.lbGrup);
             this.Controls.Add(this.cbGrup);
-            this.Controls.Add(this.dgPersonatges);
+            this.Controls.Add(this.dgPoligons);
             this.Controls.Add(this.lbPersonatges);
             this.Name = "FrmMain";
             this.Text = "Poligons";
             this.Load += new System.EventHandler(this.FrmMain_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgPersonatges)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgPoligons)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -147,7 +148,7 @@
         private System.Windows.Forms.Label lbInfo;
         private System.Windows.Forms.Label lbGrup;
         private System.Windows.Forms.ComboBox cbGrup;
-        private System.Windows.Forms.DataGridView dgPersonatges;
+        private System.Windows.Forms.DataGridView dgPoligons;
         private System.Windows.Forms.Label lbPersonatges;
         private System.Windows.Forms.Panel pnlFormas;
     }
