@@ -16,11 +16,9 @@ namespace M6Poligon.FORMS
     {
         String poligon = "Cercle";
         bdPoligonsEntities poligonsContext;
-        FrmMain fMain;
-        public FrmAdd(FrmMain xFmain)
+        public FrmAdd()
         {
             InitializeComponent();
-            fMain = xFmain;
         }
 
         private void chkPle_CheckedChanged(object sender, EventArgs e)
@@ -67,7 +65,7 @@ namespace M6Poligon.FORMS
                             ClElf elf = new ClElf(bd, tbNom.Text, strength, intelligence, grup, R.Next(1200, 10000), 1, R.Next(1000, 100000) / 100, llColorsCabell[R.Next(0, llColorsCabell.Count)], R.Next(0, 101));
                             break;
                         case "Hobbits":
-                            ClHobbit hob = new ClHobbit(bd, tbNom.Text, strength, intelligence, grup, R.Next(90, 121), R.Next(20, 101), 1, "La Comarca", R.Next(0, 101));
+                            ClRectangle hob = new ClRectangle(fMain.pnl);
                             break;
                         case "Humans":
                             ClHuma hum = new ClHuma(bd, tbNom.Text, strength, intelligence, grup, R.Next(90, 121), llCaracterístiques[R.Next(0, llCaracterístiques.Count)], 1, R.Next(0, 101), llTerresHumans[R.Next(0, llTerresHumans.Count)]);
@@ -97,7 +95,7 @@ namespace M6Poligon.FORMS
                     switch (poligon)
                     {
                         case "Cercle":
-                            ClCercle cer = new ClCercle(this.ParentForm,);
+                            ClCercle cer = new ClCercle(,);
                             break;
                         case "Elfs":
                             ClElf elf = new ClElf(bd, tbNom.Text, strength, intelligence, grup, R.Next(1200, 10000), 1, R.Next(1000, 100000) / 100, llColorsCabell[R.Next(0, llColorsCabell.Count)], R.Next(0, 101));

@@ -29,12 +29,14 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lbAlcada = new System.Windows.Forms.Label();
+            this.lbAmplada = new System.Windows.Forms.Label();
+            this.lbNom = new System.Windows.Forms.Label();
+            this.tbNom = new System.Windows.Forms.TextBox();
             this.chkPle = new System.Windows.Forms.CheckBox();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.cdColorPol = new System.Windows.Forms.ColorDialog();
-            this.tbNom = new System.Windows.Forms.TextBox();
-            this.lbNom = new System.Windows.Forms.Label();
             this.gbGrup = new System.Windows.Forms.GroupBox();
             this.rdOcto = new System.Windows.Forms.RadioButton();
             this.rdHexa = new System.Windows.Forms.RadioButton();
@@ -48,8 +50,6 @@
             this.rdCercle = new System.Windows.Forms.RadioButton();
             this.btOK = new System.Windows.Forms.Button();
             this.btCancel = new System.Windows.Forms.Button();
-            this.lbAmplada = new System.Windows.Forms.Label();
-            this.lbAlcada = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -71,6 +71,40 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Caracteristiques";
+            // 
+            // lbAlcada
+            // 
+            this.lbAlcada.AutoSize = true;
+            this.lbAlcada.Location = new System.Drawing.Point(46, 127);
+            this.lbAlcada.Name = "lbAlcada";
+            this.lbAlcada.Size = new System.Drawing.Size(53, 16);
+            this.lbAlcada.TabIndex = 6;
+            this.lbAlcada.Text = "Alçada:";
+            // 
+            // lbAmplada
+            // 
+            this.lbAmplada.AutoSize = true;
+            this.lbAmplada.Location = new System.Drawing.Point(37, 83);
+            this.lbAmplada.Name = "lbAmplada";
+            this.lbAmplada.Size = new System.Drawing.Size(65, 16);
+            this.lbAmplada.TabIndex = 5;
+            this.lbAmplada.Text = "Amplada:";
+            // 
+            // lbNom
+            // 
+            this.lbNom.AutoSize = true;
+            this.lbNom.Location = new System.Drawing.Point(60, 43);
+            this.lbNom.Name = "lbNom";
+            this.lbNom.Size = new System.Drawing.Size(39, 16);
+            this.lbNom.TabIndex = 4;
+            this.lbNom.Text = "Nom:";
+            // 
+            // tbNom
+            // 
+            this.tbNom.Location = new System.Drawing.Point(114, 37);
+            this.tbNom.Name = "tbNom";
+            this.tbNom.Size = new System.Drawing.Size(140, 22);
+            this.tbNom.TabIndex = 3;
             // 
             // chkPle
             // 
@@ -96,22 +130,6 @@
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(140, 22);
             this.numericUpDown1.TabIndex = 0;
-            // 
-            // tbNom
-            // 
-            this.tbNom.Location = new System.Drawing.Point(114, 37);
-            this.tbNom.Name = "tbNom";
-            this.tbNom.Size = new System.Drawing.Size(140, 22);
-            this.tbNom.TabIndex = 3;
-            // 
-            // lbNom
-            // 
-            this.lbNom.AutoSize = true;
-            this.lbNom.Location = new System.Drawing.Point(60, 43);
-            this.lbNom.Name = "lbNom";
-            this.lbNom.Size = new System.Drawing.Size(39, 16);
-            this.lbNom.TabIndex = 4;
-            this.lbNom.Text = "Nom:";
             // 
             // gbGrup
             // 
@@ -263,41 +281,25 @@
             // 
             // btOK
             // 
+            this.btOK.BackColor = System.Drawing.Color.LightGreen;
             this.btOK.Location = new System.Drawing.Point(73, 451);
             this.btOK.Name = "btOK";
             this.btOK.Size = new System.Drawing.Size(122, 35);
             this.btOK.TabIndex = 5;
             this.btOK.Text = "ADD";
-            this.btOK.UseVisualStyleBackColor = true;
+            this.btOK.UseVisualStyleBackColor = false;
             this.btOK.Click += new System.EventHandler(this.btOK_Click);
             // 
             // btCancel
             // 
+            this.btCancel.BackColor = System.Drawing.Color.Crimson;
             this.btCancel.Location = new System.Drawing.Point(289, 451);
             this.btCancel.Name = "btCancel";
             this.btCancel.Size = new System.Drawing.Size(122, 35);
             this.btCancel.TabIndex = 6;
             this.btCancel.Text = "CANCEL";
-            this.btCancel.UseVisualStyleBackColor = true;
+            this.btCancel.UseVisualStyleBackColor = false;
             this.btCancel.Click += new System.EventHandler(this.btCancel_Click);
-            // 
-            // lbAmplada
-            // 
-            this.lbAmplada.AutoSize = true;
-            this.lbAmplada.Location = new System.Drawing.Point(37, 83);
-            this.lbAmplada.Name = "lbAmplada";
-            this.lbAmplada.Size = new System.Drawing.Size(65, 16);
-            this.lbAmplada.TabIndex = 5;
-            this.lbAmplada.Text = "Amplada:";
-            // 
-            // lbAlcada
-            // 
-            this.lbAlcada.AutoSize = true;
-            this.lbAlcada.Location = new System.Drawing.Point(46, 127);
-            this.lbAlcada.Name = "lbAlcada";
-            this.lbAlcada.Size = new System.Drawing.Size(53, 16);
-            this.lbAlcada.TabIndex = 6;
-            this.lbAlcada.Text = "Alçada:";
             // 
             // FrmAdd
             // 
