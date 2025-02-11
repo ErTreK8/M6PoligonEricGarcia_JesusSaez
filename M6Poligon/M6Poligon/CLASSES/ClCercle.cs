@@ -12,32 +12,33 @@ namespace M6Poligon.CLASSES
     public class ClCercle : ClPoligon
     {
 
-        private int Width { get; set; }
-        private int Height { get; set; }
+        private int mida { get; set; }          // midadel costat del quadrat
+        // midadel costat del quadrat
+
         private Point posVertex { get; set; }   // posició on quedarà el vèrtex superior esquerre depenent del centre i la mida
 
         // constructor per a un quadrat sense interior 
         // : base(.....) ve determinat per l'herència del constructor genèric de la superclasse ClPoligons
-        public ClCercle(Form xfrmMain, Point xcentre, int xwidth, int xheight) : base(xfrmMain, xcentre)
+
+        //Constructor vacio
+        public ClCercle(Panel xpnlPare, int xmida) : base(xpnlPare)
         {
-            Width = xwidth;
-            Height = xheight;
+            mida = xmida;
             dibuixarFigura();
         }
 
 
-        // constructor per a un quadrat amb interior (2on constructor - sobrecàrrega)
-        public ClCercle(Form xfrmMain, Point xcentre, Color xcolor, int xwidth, int xheight) : base(xfrmMain, xcentre, xcolor)
+        // constructor Con color
+        public ClCercle(Panel xpnlPare, Color xcolor, int xmida) : base(xpnlPare, xcolor)
         {
-            Width = xwidth;
-            Height = xheight;
+            this.mida = xmida;
             dibuixarFigura();
         }
 
         private void dibuixarFigura()
         {
-            posVertex = new Point((int)(posCentre.X - (Width / 2)), (int)(posCentre.Y - (Height / 2)));
-            pnl.Size = new Size(Width + 5, Height + 5);
+            posVertex = new Point((int)(posCentre.X - (mida / 2)), (int)(posCentre.Y - (mida / 2)));
+            pnl.Size = new Size(mida,mida);
             pnl.Location = posVertex;
             pnl.Paint += new PaintEventHandler(ferCercle);
             pnlPare.Controls.Add(pnl);
@@ -49,7 +50,7 @@ namespace M6Poligon.CLASSES
         {
             Pen p = new Pen(Color.Black, 2);   // Pen per a traçar el contorn que farem de color negre i de 2 pixels de gruix
 
-            Rectangle r = new Rectangle(new Point(0, 0), new Size(Width, Height));
+            Rectangle r = new Rectangle(new Point(0, 0), new Size(mida, mida));
             if (colorInterior != Color.Empty)
             {
                 e.Graphics.FillEllipse(new SolidBrush(colorInterior), r);
@@ -58,12 +59,13 @@ namespace M6Poligon.CLASSES
         }
 
 
+        
+
         public override Double Area()
         {
-            double a = Width / 2.0;
-            double b = Height / 2.0;
+            double radio = mida / 2.0;
             // Área = π * a * b
-            return Math.PI * a * b;
+            return Math.PI * (radio*radio);
         }
         public override void elimina()
         {
@@ -71,7 +73,9 @@ namespace M6Poligon.CLASSES
         }
         public override Double Perimetre()
         {
-            return 2;
+            double radio = mida / 2.0;
+
+            return 2 *Math.PI*radio;
         }
         public override bool getPoligons(ClBDSqlServer bd, int idPoligon)
         {
