@@ -58,8 +58,23 @@ namespace M6Poligon.CLASSES
             e.Graphics.DrawEllipse(p, r);
         }
 
+        public ClCercle(ClBDSqlServer xbd, string xnom, string xtipo, string xColor, string xPle, int xmida) : base(xbd, xnom, xtipo, xColor, xPle)
+        {
+            mida = xmida;
 
-        
+
+            String xsql = $"INSERT INTO Rectangles(id, mida, ) VALUES ({Id}, {xmida},)";
+
+            if (xbd.executarOrdre(xsql))
+            {
+                MessageBox.Show($"Poligon inserit correctament a la base de dades", "TOT BÉ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show($"No s'ha pogut inserir el {xtipo} a la base de dades", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
 
         public override Double Area()
         {
@@ -75,7 +90,7 @@ namespace M6Poligon.CLASSES
         {
             double radio = mida / 2.0;
 
-            return 2 *Math.PI*radio;
+            return 2*Math.PI*radio;
         }
         public override bool getPoligons(ClBDSqlServer bd, int idPoligon)
         {

@@ -135,6 +135,7 @@
             this.Controls.Add(this.lbPersonatges);
             this.Name = "FrmMain";
             this.Text = "Poligons";
+            this.Load += new System.EventHandler(this.FrmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgPersonatges)).EndInit();
             this.ResumeLayout(false);
 

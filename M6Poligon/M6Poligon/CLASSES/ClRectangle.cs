@@ -37,6 +37,8 @@ namespace M6Poligon.CLASSES
             dibuixarFigura();
         }
 
+
+
         private void dibuixarFigura()
         {
             posVertex = new Point((int)(posCentre.X - (ancho / 2)), (int)(posCentre.Y - (altura / 2)));
@@ -58,8 +60,23 @@ namespace M6Poligon.CLASSES
                 e.Graphics.FillRectangle(new SolidBrush(colorInterior), r);
             }
             e.Graphics.DrawRectangle(p, r);
+        }
 
+        public ClRectangle(ClBDSqlServer xbd, string xnom, string xtipo, string xColor, string xPle, int xancho,int xaltura) : base(xbd, xnom, xtipo, xColor, xPle)
+        {
+            ancho = xancho;
+            altura = xaltura;
 
+            String xsql = $"INSERT INTO Rectangles(id, base, altura) VALUES ({Id}, {ancho}, {altura})";
+
+            if (xbd.executarOrdre(xsql))
+            {
+                MessageBox.Show($"Poligon inserit correctament a la base de dades", "TOT BÉ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show($"No s'ha pogut inserir el {xtipo} a la base de dades", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         // retorna l'àrea de la figura mesurada en pixels

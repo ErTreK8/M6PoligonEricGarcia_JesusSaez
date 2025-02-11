@@ -9,81 +9,65 @@ using System.Windows.Forms;
 
 namespace M6Poligon.CLASSES
 {
-    public class ClTriangleIsosceles : ClPoligon                 // ClPoligons és la superclasse de la que es deriva ClQuadrat
+    public class ClTriangleIsosceles : ClPoligon
     {
-        private int Width { get; set; }
-        private int Height { get; set; }
-        private String Tipus { get; set; }
-        private Point posVertex { get; set; }   // posició on quedarà el vèrtex superior esquerre depenent del centre i la mida
+        private int ancho;
+        private int altura;
 
-        // constructor per a un quadrat sense interior 
-        // : base(.....) ve determinat per l'herència del constructor genèric de la superclasse ClPoligons
-        public ClTriangleIsosceles(Form xfrmMain, Point xcentre, String xtipus, int xwidth, int xheight) : base(xfrmMain, xcentre)
+        public ClTriangleIsosceles(ClBDSqlServer xbd, string xnom, string xtipo, string xColor, string xPle, int xancho, int xaltura) : base(xbd, xnom, xtipo, xColor, xPle)
         {
-            Width = xwidth;
-            Height = xheight;
-            Tipus = xtipus;
+            ancho = xancho;
+            altura = xaltura;
+
+            String xsql = $"INSERT INTO Rectangles(id, base, altura) VALUES ({Id}, {ancho}, {altura})";
+
+            if (xbd.executarOrdre(xsql))
+            {
+                MessageBox.Show($"Poligon inserit correctament a la base de dades", "TOT BÉ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show($"No s'ha pogut inserir el {xtipo} a la base de dades", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public ClTriangleIsosceles(Panel xpnlPare, int ancho, int altura) : base(xpnlPare)
+        {
+            this.ancho = ancho;
+            this.altura = altura;
             dibuixarFigura();
         }
 
-
-        // constructor per a un quadrat amb interior (2on constructor - sobrecàrrega)
-        public ClTriangleIsosceles(Form xfrmMain, Point xcentre, Color xcolor, String xtipus, int xwidth, int xheight) : base(xfrmMain, xcentre, xcolor)
+        public ClTriangleIsosceles(Panel xpnlPare, Color xcolor, int ancho, int altura) : base(xpnlPare, xcolor)
         {
-            Width = xwidth;
-            Height = xheight;
-            Tipus = xtipus;
+            this.ancho = ancho;
+            this.altura = altura;
             dibuixarFigura();
         }
 
         private void dibuixarFigura()
         {
-            posVertex = new Point((int)(posCentre.X - (Width / 2)), (int)(posCentre.Y - (Height / 2)));
-            pnl.Size = new Size(Width, Height);
-            pnl.Location = posVertex;
-            pnl.Paint += new PaintEventHandler(ferTriangleRectangle);
+            pnl.Size = new Size(ancho, altura);
+            pnl.Location = new Point(posCentre.X - ancho / 2, posCentre.Y - altura / 2);
+            pnl.Paint += new PaintEventHandler(ferTriangle);
             pnlPare.Controls.Add(pnl);
             pnl.BringToFront();
         }
 
-        // pinta el quadrat dins el Panel
-        private void ferTriangleRectangle(object sender, PaintEventArgs e)
+        private void ferTriangle(object sender, PaintEventArgs e)
         {
-            Point[] vPunts = null;
-            Pen p = new Pen(Color.Black, 2);   // Pen per a traçar el contorn que farem de color negre i de 2 pixels de gruix
-
-            switch (Tipus)
-            {
-                case "Rectangle":
-                    vPunts = new Point[4] { new Point(0, 0), new Point(0, Height), new Point(Width, Height), new Point(0, 0) };
-                    break;
-            }
-            if (colorInterior != Color.Empty)
-            {
-                e.Graphics.FillPolygon(new SolidBrush(colorInterior), vPunts);
-            }
-            e.Graphics.DrawPolygon(p, vPunts);
-
-
+            Pen p = new Pen(Color.Black, 2);
+            Point[] points = {
+                new Point(ancho / 2, 0),
+                new Point(0, altura),
+                new Point(ancho, altura)
+            };
+            if (ple) e.Graphics.FillPolygon(new SolidBrush(colorInterior), points);
+            e.Graphics.DrawPolygon(p, points);
         }
 
-        // retorna l'àrea de la figura mesurada en pixels
-        public override Double Area()
-        {
-            return (Width * Height / 2.0);
-        }
-        public override void elimina()
-        {
-
-        }
-        public override Double Perimetre()
-        {
-            return 2;
-        }
-        public override bool getPoligons(ClBDSqlServer bd, int idPoligon)
-        {
-            Boolean xb = false;
-            return xb;
-        }
+        public override Double Area() => (ancho * altura) / 2.0;
+        public override Double Perimetre() => ancho + 2 * Math.Sqrt(Math.Pow(altura, 2) + Math.Pow(ancho / 2.0, 2));
+        public override void elimina() { }
+        public override bool getPoligons(ClBDSqlServer bd, int idPoligon) => false;
     }
 }

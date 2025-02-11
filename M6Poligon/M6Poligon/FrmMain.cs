@@ -1,4 +1,5 @@
-﻿using System;
+﻿using M6Poligon.CLASSES;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,12 @@ namespace M6Poligon
         public FrmMain()
         {
             InitializeComponent();
+        }
+
+        private void FrmMain_Load(object sender, EventArgs e)
+        {
+            ClRectangle p = new ClRectangle(pnlFormas, 5, 5);
+            p.
         }
     }
 }

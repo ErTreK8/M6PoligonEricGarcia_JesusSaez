@@ -10,6 +10,7 @@ using System.Linq.Expressions;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.TrackBar;
 using System.Data;
 using CLASSES;
+using System.Globalization;
 
 namespace M6Poligon.CLASSES
 {
@@ -53,23 +54,20 @@ namespace M6Poligon.CLASSES
         }
         //CONSTRUCTOR PER FER L'INSERT
 
-        public ClPoligon(ClBDSqlServer xbd, String xnom, String xforma, String xcolor, int xple)
+        public ClPoligon(ClBDSqlServer xbd, String xname, String xtipo, String xColor, String xPle)
         {
-
             DataSet xdset = new DataSet();
-            String xsql = $"INSERT INTO Poligon(Nom, Forma, Color, Ple) VALUES('{xnom}', '{xforma}', '{xcolor}', {xple})";
+            String xsql = $"INSERT INTO Poligonos(nombre, color, forma, ple) VALUES ('{xname}','{xColor}','{xtipo}','{xPle}')";
 
             if (xbd.executarOrdre(xsql))
             {
-                // Si la inserció ha anat bé recuperem l'Id generat perquè el necessitem per a fer la inserció en la taula de la subclasse
-                // ALERTA!!!! En un entorn multiusuari, aquesta operació s'hauria de fer amb una TRANSACTION per a garantir que el resultat és correcte
-                xsql = "SELECT TOP 1 Id FROM Poligon ORDER BY Id DESC";
-                //CAMBIAR A ID AUTOINCREMENTAL???????
+                xsql = "SELECT TOP 1 id FROM Poligonos ORDER BY id DESC";
                 xbd.Consulta(xsql, ref xdset);
+
                 if (xdset.Tables[0].Rows.Count == 0)
                 {
                     Id = -1;
-                    MessageBox.Show("No s'ha pogut recuperar l'Id del nou polígon", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("No s'ha pogut recuperar l'Id del nou poligono", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
