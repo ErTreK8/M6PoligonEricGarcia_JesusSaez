@@ -34,8 +34,8 @@
             this.lbNom = new System.Windows.Forms.Label();
             this.tbNom = new System.Windows.Forms.TextBox();
             this.chkPle = new System.Windows.Forms.CheckBox();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.nUDAlcada = new System.Windows.Forms.NumericUpDown();
+            this.nUDAmplada = new System.Windows.Forms.NumericUpDown();
             this.cdColorPol = new System.Windows.Forms.ColorDialog();
             this.gbGrup = new System.Windows.Forms.GroupBox();
             this.rdOcto = new System.Windows.Forms.RadioButton();
@@ -51,8 +51,8 @@
             this.btOK = new System.Windows.Forms.Button();
             this.btCancel = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nUDAlcada)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nUDAmplada)).BeginInit();
             this.gbGrup.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,8 +63,8 @@
             this.groupBox1.Controls.Add(this.lbNom);
             this.groupBox1.Controls.Add(this.tbNom);
             this.groupBox1.Controls.Add(this.chkPle);
-            this.groupBox1.Controls.Add(this.numericUpDown2);
-            this.groupBox1.Controls.Add(this.numericUpDown1);
+            this.groupBox1.Controls.Add(this.nUDAlcada);
+            this.groupBox1.Controls.Add(this.nUDAmplada);
             this.groupBox1.Location = new System.Drawing.Point(23, 257);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(449, 178);
@@ -117,19 +117,19 @@
             this.chkPle.UseVisualStyleBackColor = true;
             this.chkPle.CheckedChanged += new System.EventHandler(this.chkPle_CheckedChanged);
             // 
-            // numericUpDown2
+            // nUDAlcada
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(114, 121);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(140, 22);
-            this.numericUpDown2.TabIndex = 1;
+            this.nUDAlcada.Location = new System.Drawing.Point(114, 121);
+            this.nUDAlcada.Name = "nUDAlcada";
+            this.nUDAlcada.Size = new System.Drawing.Size(140, 22);
+            this.nUDAlcada.TabIndex = 1;
             // 
-            // numericUpDown1
+            // nUDAmplada
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(114, 81);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(140, 22);
-            this.numericUpDown1.TabIndex = 0;
+            this.nUDAmplada.Location = new System.Drawing.Point(114, 81);
+            this.nUDAmplada.Name = "nUDAmplada";
+            this.nUDAmplada.Size = new System.Drawing.Size(140, 22);
+            this.nUDAmplada.TabIndex = 0;
             // 
             // gbGrup
             // 
@@ -315,8 +315,8 @@
             this.Load += new System.EventHandler(this.FrmAdd_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nUDAlcada)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nUDAmplada)).EndInit();
             this.gbGrup.ResumeLayout(false);
             this.gbGrup.PerformLayout();
             this.ResumeLayout(false);
@@ -325,8 +325,8 @@
 
         #endregion
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown nUDAlcada;
+        private System.Windows.Forms.NumericUpDown nUDAmplada;
         private System.Windows.Forms.ColorDialog cdColorPol;
         private System.Windows.Forms.CheckBox chkPle;
         private System.Windows.Forms.Label lbNom;

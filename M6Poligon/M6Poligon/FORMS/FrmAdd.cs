@@ -1,4 +1,5 @@
-﻿using M6Poligon.CLASSES;
+﻿using CLASSES;
+using M6Poligon.CLASSES;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,10 +16,12 @@ namespace M6Poligon.FORMS
     public partial class FrmAdd : Form
     {
         String poligon = "Cercle";
-        bdPoligonsEntities poligonsContext;
-        public FrmAdd()
+        ClBDSqlServer bd;
+        public FrmAdd(ClBDSqlServer xbd)
         {
             InitializeComponent();
+
+            bd = xbd;
         }
 
         private void chkPle_CheckedChanged(object sender, EventArgs e)
@@ -59,13 +62,13 @@ namespace M6Poligon.FORMS
                     switch (poligon)
                     {
                         case "Cercle":
-                            ClCercle cer = new ClCercle(this.ParentForm,);
+                            ClCercle cer = new ClCercle();
                             break;
                         case "Elfs":
                             ClElf elf = new ClElf(bd, tbNom.Text, strength, intelligence, grup, R.Next(1200, 10000), 1, R.Next(1000, 100000) / 100, llColorsCabell[R.Next(0, llColorsCabell.Count)], R.Next(0, 101));
                             break;
                         case "Hobbits":
-                            ClRectangle hob = new ClRectangle(fMain.pnl);
+                            ClRectangle hob = new ClRectangle(bd, tbNom.Text, poligon, "BLACK" , 1, (int)nUDAmplada.Value, (int)nUDAlcada.Value);
                             break;
                         case "Humans":
                             ClHuma hum = new ClHuma(bd, tbNom.Text, strength, intelligence, grup, R.Next(90, 121), llCaracterístiques[R.Next(0, llCaracterístiques.Count)], 1, R.Next(0, 101), llTerresHumans[R.Next(0, llTerresHumans.Count)]);
