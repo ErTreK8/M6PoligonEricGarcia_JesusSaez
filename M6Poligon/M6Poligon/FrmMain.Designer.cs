@@ -28,13 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbInfo = new System.Windows.Forms.Label();
             this.lbGrup = new System.Windows.Forms.Label();
             this.cbGrup = new System.Windows.Forms.ComboBox();
             this.dgPoligons = new System.Windows.Forms.DataGridView();
             this.lbPersonatges = new System.Windows.Forms.Label();
             this.pnlFormas = new System.Windows.Forms.Panel();
+            this.btDel = new System.Windows.Forms.Button();
+            this.btOK = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgPoligons)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,9 +91,9 @@
             this.dgPoligons.AllowUserToAddRows = false;
             this.dgPoligons.AllowUserToDeleteRows = false;
             this.dgPoligons.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Yellow;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.dgPoligons.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.dgPoligons.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgPoligons.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgPoligons.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgPoligons.Location = new System.Drawing.Point(12, 90);
@@ -124,11 +126,34 @@
             this.pnlFormas.Size = new System.Drawing.Size(499, 401);
             this.pnlFormas.TabIndex = 13;
             // 
+            // btDel
+            // 
+            this.btDel.BackColor = System.Drawing.Color.Crimson;
+            this.btDel.Location = new System.Drawing.Point(861, 644);
+            this.btDel.Name = "btDel";
+            this.btDel.Size = new System.Drawing.Size(122, 35);
+            this.btDel.TabIndex = 15;
+            this.btDel.Text = "DELETE";
+            this.btDel.UseVisualStyleBackColor = false;
+            this.btDel.Click += new System.EventHandler(this.btDel_Click);
+            // 
+            // btOK
+            // 
+            this.btOK.BackColor = System.Drawing.Color.LightGreen;
+            this.btOK.Location = new System.Drawing.Point(645, 644);
+            this.btOK.Name = "btOK";
+            this.btOK.Size = new System.Drawing.Size(122, 35);
+            this.btOK.TabIndex = 14;
+            this.btOK.Text = "ADD";
+            this.btOK.UseVisualStyleBackColor = false;
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1115, 745);
+            this.Controls.Add(this.btDel);
+            this.Controls.Add(this.btOK);
             this.Controls.Add(this.pnlFormas);
             this.Controls.Add(this.lbInfo);
             this.Controls.Add(this.lbGrup);
@@ -151,6 +176,8 @@
         private System.Windows.Forms.DataGridView dgPoligons;
         private System.Windows.Forms.Label lbPersonatges;
         private System.Windows.Forms.Panel pnlFormas;
+        private System.Windows.Forms.Button btDel;
+        private System.Windows.Forms.Button btOK;
     }
 }
 

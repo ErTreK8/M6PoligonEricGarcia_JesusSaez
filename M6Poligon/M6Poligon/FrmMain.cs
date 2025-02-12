@@ -59,11 +59,11 @@ namespace M6Poligon
 
             if (tots)
             {
-                xsql = "SELECT p.*, q.mida, r.x, r.y FROM tbPoligon p LEFT JOIN tbQuadrat q ON q.idPoligon = p.idPoligon LEFT JOIN tbRectangle r ON r.idPoligon = p.idPoligon ORDER BY p.nombre;";
+                xsql = "SELECT p.*, \r\n       q.mida AS Quadrat_mida, \r\n       r.x AS Rectangle_x, r.y AS Rectangle_y, \r\n       c.mida AS Cercle_mida, \r\n       e.x AS Elipse_x, e.y AS Elipse_y, \r\n       tr.x AS TriangleRectangle_x, tr.y AS TriangleRectangle_y, \r\n       ti.x AS TriangleIsosceles_x, ti.y AS TriangleIsosceles_y, \r\n       rom.x AS Rombe_x, rom.y AS Rombe_y, \r\n       pt.mida AS Pentagon_mida, \r\n       h.mida AS Hexagon_mida, \r\n       o.mida AS Octagon_mida\r\nFROM tbPoligon p\r\nLEFT JOIN tbQuadrat q ON q.idPoligon = p.idPoligon\r\nLEFT JOIN tbRectangle r ON r.idPoligon = p.idPoligon\r\nLEFT JOIN tbCercle c ON c.idPoligon = p.idPoligon\r\nLEFT JOIN tbElipse e ON e.idPoligon = p.idPoligon\r\nLEFT JOIN tbTriangleRectangle tr ON tr.idPoligon = p.idPoligon\r\nLEFT JOIN tbTriangleIsosceles ti ON ti.idPoligon = p.idPoligon\r\nLEFT JOIN tbRombe rom ON rom.idPoligon = p.idPoligon\r\nLEFT JOIN tbPentagon pt ON pt.idPoligon = p.idPoligon\r\nLEFT JOIN tbHexagon h ON h.idPoligon = p.idPoligon\r\nLEFT JOIN tbOctagon o ON o.idPoligon = p.idPoligon\r\nORDER BY p.nombre;\r\n";
             }
             else
             {
-                xsql = $"SELECT p.* from tbPoligon p inner join tb{cbGrup.SelectedItem.ToString().Replace(" ", "")} t on t.idPoligon=p.idPoligon ORDER BY nombre";
+                xsql = $"SELECT p.* from tbPoligon p RIGHT join tb{cbGrup.SelectedItem.ToString().Replace(" ", "")} t on t.idPoligon=p.idPoligon ORDER BY nombre";
             }
 
             
@@ -97,9 +97,9 @@ namespace M6Poligon
             dgPoligons.Columns["forma"].HeaderText = "forma";
             dgPoligons.Columns["forma"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dgPoligons.Columns["ple"].HeaderText = "ple";
-            dgPoligons.Columns["mida"].Visible = false;
-            dgPoligons.Columns["x"].Visible = false;
-            dgPoligons.Columns["y"].Visible = false;
+            //dgPoligons.Columns["mida"].Visible = false;
+            //dgPoligons.Columns["x"].Visible = false;
+            //dgPoligons.Columns["y"].Visible = false;
 
         }
 
@@ -108,46 +108,56 @@ namespace M6Poligon
             if (dgPoligons.SelectedRows.Count > 0)
             {
                 //mostrarDades(dgPoligons.SelectedRows[0].Index);
-                mostrarPoligon();
+                //mostrarPoligon();
             }
         }
 
         private void mostrarPoligon()
         {
             object p = null;
-            switch (dgPoligons.SelectedRows[0].Cells["forma"].Value.ToString())
+
+            try
             {
-                case "Quadrat":
-                    p = new ClQuadrat(pnlFormas, int.Parse(dgPoligons.SelectedRows[0].Cells["mida"].Value.ToString()));
-                    break;
-                case "Rectangle":
-                    p = new ClRectangle(pnlFormas, int.Parse(dgPoligons.SelectedRows[0].Cells["y"].Value.ToString()), int.Parse(dgPoligons.SelectedRows[0].Cells["x"].Value.ToString()));
-                    break;
-                case "Cercle":
-                    p = new ClCercle(pnlFormas, int.Parse(dgPoligons.SelectedRows[0].Cells["mida"].Value.ToString()));
-                    break;
-                case "Elipse":
-                    p = new ClElipse(pnlFormas, int.Parse(dgPoligons.SelectedRows[0].Cells["y"].Value.ToString()), int.Parse(dgPoligons.SelectedRows[0].Cells["x"].Value.ToString()));
-                    break;
-                case "Triangle rectangle":
-                    p = new ClTriangleRectangle(pnlFormas, int.Parse(dgPoligons.SelectedRows[0].Cells["y"].Value.ToString()), int.Parse(dgPoligons.SelectedRows[0].Cells["x"].Value.ToString()));
-                    break;
-                case "Triangle isosceles":
-                    p = new ClTriangleIsosceles(pnlFormas, int.Parse(dgPoligons.SelectedRows[0].Cells["y"].Value.ToString()), int.Parse(dgPoligons.SelectedRows[0].Cells["x"].Value.ToString()));
-                    break;
-                case "Rombe":
-                    p = new ClRombo(pnlFormas, int.Parse(dgPoligons.SelectedRows[0].Cells["y"].Value.ToString()), int.Parse(dgPoligons.SelectedRows[0].Cells["x"].Value.ToString()));
-                    break;
-                case "Pentagon":
-                    p = new ClPentagono(pnlFormas, int.Parse(dgPoligons.SelectedRows[0].Cells["mida"].Value.ToString()));
-                    break;
-                case "Hexagon":
-                    p = new ClHexagono(pnlFormas, int.Parse(dgPoligons.SelectedRows[0].Cells["mida"].Value.ToString()));
-                    break;
-                case "Octagon":
-                    p = new ClOctogono(pnlFormas, int.Parse(dgPoligons.SelectedRows[0].Cells["mida"].Value.ToString()));
-                    break;
+                switch (dgPoligons.SelectedRows[0].Cells["forma"].Value.ToString())
+                //switch ("Rectangle")
+                {
+                    case "Quadrat":
+                        p = new ClQuadrat(pnlFormas, int.Parse(dgPoligons.SelectedRows[0].Cells["mida"].Value.ToString()));
+                        break;
+                    case "Rectangle":
+                        p = new ClRectangle(pnlFormas, int.Parse(dgPoligons.SelectedRows[0].Cells["x"].Value.ToString()), int.Parse(dgPoligons.SelectedRows[0].Cells["y"].Value.ToString()));
+                        break;
+                    case "Cercle":
+                        p = new ClCercle(pnlFormas, int.Parse(dgPoligons.SelectedRows[0].Cells["mida"].Value.ToString()));
+                        break;
+                    case "Elipse":
+                        p = new ClElipse(pnlFormas, int.Parse(dgPoligons.SelectedRows[0].Cells["y"].Value.ToString()), int.Parse(dgPoligons.SelectedRows[0].Cells["x"].Value.ToString()));
+                        break;
+                    case "Triangle rectangle":
+                        p = new ClTriangleRectangle(pnlFormas, int.Parse(dgPoligons.SelectedRows[0].Cells["y"].Value.ToString()), int.Parse(dgPoligons.SelectedRows[0].Cells["x"].Value.ToString()));
+                        break;
+                    case "Triangle isosceles":
+                        p = new ClTriangleIsosceles(pnlFormas, int.Parse(dgPoligons.SelectedRows[0].Cells["y"].Value.ToString()), int.Parse(dgPoligons.SelectedRows[0].Cells["x"].Value.ToString()));
+                        break;
+                    case "Rombe":
+                        p = new ClRombo(pnlFormas, int.Parse(dgPoligons.SelectedRows[0].Cells["y"].Value.ToString()), int.Parse(dgPoligons.SelectedRows[0].Cells["x"].Value.ToString()));
+                        break;
+                    case "Pentagon":
+                        p = new ClPentagono(pnlFormas, int.Parse(dgPoligons.SelectedRows[0].Cells["mida"].Value.ToString()));
+                        break;
+                    case "Hexagon":
+                        p = new ClHexagono(pnlFormas, int.Parse(dgPoligons.SelectedRows[0].Cells["mida"].Value.ToString()));
+                        break;
+                    case "Octagon":
+                        p = new ClOctogono(pnlFormas, int.Parse(dgPoligons.SelectedRows[0].Cells["mida"].Value.ToString()));
+                        break;
+                }
             }
+            catch(Exception ex)
+            {
+                MessageBox.Show(dgPoligons.SelectedRows[0].Cells["x"].Value.ToString() + "," + dgPoligons.SelectedRows[0].Cells["y"].Value.ToString());
+            }
+            
         }
 
         //private void omplirLlistes()
@@ -220,6 +230,21 @@ namespace M6Poligon
             if (xfila >= 0)
             {
                 //p = new ClPoligon(xfila.);
+            }
+        }
+
+        private void btDel_Click(object sender, EventArgs e)
+        {
+            String xsql = "";
+
+            if (dgPoligons.SelectedRows[0] != null)
+            {
+                if (MessageBox.Show($"Segur que vols eliminar el {dgPoligons.SelectedRows[0].Cells["forma"].Value} amb idPoligon {dgPoligons.SelectedRows[0].Cells["idPoligon"].Value}", "ELIMINAR", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    xsql = $"DELETE FROM tbPoligon WHERE idPoligon={dgPoligons.SelectedRows[0].Cells["idPoligon"].Value}";
+                    bd.executarOrdre(xsql);
+                    getDades();
+                }
             }
         }
     }
