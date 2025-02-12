@@ -3,20 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\Victor Garcia\\OneDrive\\Escritorio\\DAM2\\M6\\UF2\\M6PoligonEricGarcia_JesusSaez\\M6Poligon\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{59BAF32F-18D8-400C-9DD7-7E882A9FE334}|M6Poligon\\M6Poligon.csproj|c:\\users\\victor garcia\\onedrive\\escritorio\\dam2\\m6\\uf2\\m6poligonericgarcia_jesussaez\\m6poligon\\m6poligon\\classes\\clrombo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{59BAF32F-18D8-400C-9DD7-7E882A9FE334}|M6Poligon\\M6Poligon.csproj|solutionrelative:m6poligon\\classes\\clrombo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{59BAF32F-18D8-400C-9DD7-7E882A9FE334}|M6Poligon\\M6Poligon.csproj|c:\\users\\victor garcia\\onedrive\\escritorio\\dam2\\m6\\uf2\\m6poligonericgarcia_jesussaez\\m6poligon\\m6poligon\\classes\\clpoligon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59BAF32F-18D8-400C-9DD7-7E882A9FE334}|M6Poligon\\M6Poligon.csproj|solutionrelative:m6poligon\\classes\\clpoligon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59BAF32F-18D8-400C-9DD7-7E882A9FE334}|M6Poligon\\M6Poligon.csproj|c:\\users\\victor garcia\\onedrive\\escritorio\\dam2\\m6\\uf2\\m6poligonericgarcia_jesussaez\\m6poligon\\m6poligon\\classes\\clrectangle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59BAF32F-18D8-400C-9DD7-7E882A9FE334}|M6Poligon\\M6Poligon.csproj|solutionrelative:m6poligon\\classes\\clrectangle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59BAF32F-18D8-400C-9DD7-7E882A9FE334}|M6Poligon\\M6Poligon.csproj|c:\\users\\victor garcia\\onedrive\\escritorio\\dam2\\m6\\uf2\\m6poligonericgarcia_jesussaez\\m6poligon\\m6poligon\\classes\\clquadrat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59BAF32F-18D8-400C-9DD7-7E882A9FE334}|M6Poligon\\M6Poligon.csproj|solutionrelative:m6poligon\\classes\\clquadrat.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{59BAF32F-18D8-400C-9DD7-7E882A9FE334}|M6Poligon\\M6Poligon.csproj|C:\\Users\\Victor Garcia\\OneDrive\\Escritorio\\DAM2\\M6\\UF2\\M6PoligonEricGarcia_JesusSaez\\M6Poligon\\m6poligon\\classes\\clcercle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{59BAF32F-18D8-400C-9DD7-7E882A9FE334}|M6Poligon\\M6Poligon.csproj|solutionrelative:m6poligon\\classes\\clcercle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{59BAF32F-18D8-400C-9DD7-7E882A9FE334}|M6Poligon\\M6Poligon.csproj|c:\\users\\victor garcia\\onedrive\\escritorio\\dam2\\m6\\uf2\\m6poligonericgarcia_jesussaez\\m6poligon\\m6poligon\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{59BAF32F-18D8-400C-9DD7-7E882A9FE334}|M6Poligon\\M6Poligon.csproj|solutionrelative:m6poligon\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{59BAF32F-18D8-400C-9DD7-7E882A9FE334}|M6Poligon\\M6Poligon.csproj|C:\\Users\\Victor Garcia\\OneDrive\\Escritorio\\DAM2\\M6\\UF2\\M6PoligonEricGarcia_JesusSaez\\M6Poligon\\m6poligon\\classes\\clrombo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59BAF32F-18D8-400C-9DD7-7E882A9FE334}|M6Poligon\\M6Poligon.csproj|solutionrelative:m6poligon\\classes\\clrombo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{59BAF32F-18D8-400C-9DD7-7E882A9FE334}|M6Poligon\\M6Poligon.csproj|C:\\Users\\Victor Garcia\\OneDrive\\Escritorio\\DAM2\\M6\\UF2\\M6PoligonEricGarcia_JesusSaez\\M6Poligon\\m6poligon\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{59BAF32F-18D8-400C-9DD7-7E882A9FE334}|M6Poligon\\M6Poligon.csproj|solutionrelative:m6poligon\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{59BAF32F-18D8-400C-9DD7-7E882A9FE334}|M6Poligon\\M6Poligon.csproj|c:\\users\\victor garcia\\onedrive\\escritorio\\dam2\\m6\\uf2\\m6poligonericgarcia_jesussaez\\m6poligon\\m6poligon\\classes\\clelipse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59BAF32F-18D8-400C-9DD7-7E882A9FE334}|M6Poligon\\M6Poligon.csproj|solutionrelative:m6poligon\\classes\\clelipse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59BAF32F-18D8-400C-9DD7-7E882A9FE334}|M6Poligon\\M6Poligon.csproj|c:\\users\\victor garcia\\onedrive\\escritorio\\dam2\\m6\\uf2\\m6poligonericgarcia_jesussaez\\m6poligon\\m6poligon\\classes\\cltriangleisosceles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59BAF32F-18D8-400C-9DD7-7E882A9FE334}|M6Poligon\\M6Poligon.csproj|solutionrelative:m6poligon\\classes\\cltriangleisosceles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59BAF32F-18D8-400C-9DD7-7E882A9FE334}|M6Poligon\\M6Poligon.csproj|c:\\users\\victor garcia\\onedrive\\escritorio\\dam2\\m6\\uf2\\m6poligonericgarcia_jesussaez\\m6poligon\\m6poligon\\classes\\cltrianglerectangle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59BAF32F-18D8-400C-9DD7-7E882A9FE334}|M6Poligon\\M6Poligon.csproj|solutionrelative:m6poligon\\classes\\cltrianglerectangle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59BAF32F-18D8-400C-9DD7-7E882A9FE334}|M6Poligon\\M6Poligon.csproj|c:\\users\\victor garcia\\onedrive\\escritorio\\dam2\\m6\\uf2\\m6poligonericgarcia_jesussaez\\m6poligon\\m6poligon\\classes\\clhexagono.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59BAF32F-18D8-400C-9DD7-7E882A9FE334}|M6Poligon\\M6Poligon.csproj|solutionrelative:m6poligon\\classes\\clhexagono.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59BAF32F-18D8-400C-9DD7-7E882A9FE334}|M6Poligon\\M6Poligon.csproj|c:\\users\\victor garcia\\onedrive\\escritorio\\dam2\\m6\\uf2\\m6poligonericgarcia_jesussaez\\m6poligon\\m6poligon\\classes\\cloctogono.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59BAF32F-18D8-400C-9DD7-7E882A9FE334}|M6Poligon\\M6Poligon.csproj|solutionrelative:m6poligon\\classes\\cloctogono.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59BAF32F-18D8-400C-9DD7-7E882A9FE334}|M6Poligon\\M6Poligon.csproj|c:\\users\\victor garcia\\onedrive\\escritorio\\dam2\\m6\\uf2\\m6poligonericgarcia_jesussaez\\m6poligon\\m6poligon\\classes\\clpentagono.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59BAF32F-18D8-400C-9DD7-7E882A9FE334}|M6Poligon\\M6Poligon.csproj|solutionrelative:m6poligon\\classes\\clpentagono.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,35 +54,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FrmMain.cs",
-              "DocumentMoniker": "C:\\Users\\Victor Garcia\\OneDrive\\Escritorio\\DAM2\\M6\\UF2\\M6PoligonEricGarcia_JesusSaez\\M6Poligon\\M6Poligon\\FrmMain.cs",
-              "RelativeDocumentMoniker": "M6Poligon\\FrmMain.cs",
-              "ToolTip": "C:\\Users\\Victor Garcia\\OneDrive\\Escritorio\\DAM2\\M6\\UF2\\M6PoligonEricGarcia_JesusSaez\\M6Poligon\\M6Poligon\\FrmMain.cs",
-              "RelativeToolTip": "M6Poligon\\FrmMain.cs",
-              "ViewState": "AgIAAKsAAAAAAAAAAAAhwL0AAABfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-11T14:18:26.56Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ClRombo.cs",
-              "DocumentMoniker": "C:\\Users\\Victor Garcia\\OneDrive\\Escritorio\\DAM2\\M6\\UF2\\M6PoligonEricGarcia_JesusSaez\\M6Poligon\\M6Poligon\\CLASSES\\ClRombo.cs",
-              "RelativeDocumentMoniker": "M6Poligon\\CLASSES\\ClRombo.cs",
-              "ToolTip": "C:\\Users\\Victor Garcia\\OneDrive\\Escritorio\\DAM2\\M6\\UF2\\M6PoligonEricGarcia_JesusSaez\\M6Poligon\\M6Poligon\\CLASSES\\ClRombo.cs",
-              "RelativeToolTip": "M6Poligon\\CLASSES\\ClRombo.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAAAFIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T12:16:13.839Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -65,25 +66,143 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FrmMain.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Victor Garcia\\OneDrive\\Escritorio\\DAM2\\M6\\UF2\\M6PoligonEricGarcia_JesusSaez\\M6Poligon\\M6Poligon\\FrmMain.cs",
-              "RelativeDocumentMoniker": "M6Poligon\\FrmMain.cs",
-              "ToolTip": "C:\\Users\\Victor Garcia\\OneDrive\\Escritorio\\DAM2\\M6\\UF2\\M6PoligonEricGarcia_JesusSaez\\M6Poligon\\M6Poligon\\FrmMain.cs [Dise\u00F1o]",
-              "RelativeToolTip": "M6Poligon\\FrmMain.cs [Dise\u00F1o]",
+              "DocumentIndex": 0,
+              "Title": "ClPoligon.cs",
+              "DocumentMoniker": "C:\\Users\\Victor Garcia\\OneDrive\\Escritorio\\DAM2\\M6\\UF2\\M6PoligonEricGarcia_JesusSaez\\M6Poligon\\M6Poligon\\CLASSES\\ClPoligon.cs",
+              "RelativeDocumentMoniker": "M6Poligon\\CLASSES\\ClPoligon.cs",
+              "ToolTip": "C:\\Users\\Victor Garcia\\OneDrive\\Escritorio\\DAM2\\M6\\UF2\\M6PoligonEricGarcia_JesusSaez\\M6Poligon\\M6Poligon\\CLASSES\\ClPoligon.cs",
+              "RelativeToolTip": "M6Poligon\\CLASSES\\ClPoligon.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T12:06:46.285Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-02-12T14:31:59.104Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "ClRectangle.cs",
+              "DocumentMoniker": "C:\\Users\\Victor Garcia\\OneDrive\\Escritorio\\DAM2\\M6\\UF2\\M6PoligonEricGarcia_JesusSaez\\M6Poligon\\M6Poligon\\CLASSES\\ClRectangle.cs",
+              "RelativeDocumentMoniker": "M6Poligon\\CLASSES\\ClRectangle.cs",
+              "ToolTip": "C:\\Users\\Victor Garcia\\OneDrive\\Escritorio\\DAM2\\M6\\UF2\\M6PoligonEricGarcia_JesusSaez\\M6Poligon\\M6Poligon\\CLASSES\\ClRectangle.cs",
+              "RelativeToolTip": "M6Poligon\\CLASSES\\ClRectangle.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAG8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T14:30:45.288Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ClQuadrat.cs",
+              "DocumentMoniker": "C:\\Users\\Victor Garcia\\OneDrive\\Escritorio\\DAM2\\M6\\UF2\\M6PoligonEricGarcia_JesusSaez\\M6Poligon\\M6Poligon\\CLASSES\\ClQuadrat.cs",
+              "RelativeDocumentMoniker": "M6Poligon\\CLASSES\\ClQuadrat.cs",
+              "ToolTip": "C:\\Users\\Victor Garcia\\OneDrive\\Escritorio\\DAM2\\M6\\UF2\\M6PoligonEricGarcia_JesusSaez\\M6Poligon\\M6Poligon\\CLASSES\\ClQuadrat.cs",
+              "RelativeToolTip": "M6Poligon\\CLASSES\\ClQuadrat.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAADwv2gAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T14:30:43.557Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ClPentagono.cs",
+              "DocumentMoniker": "C:\\Users\\Victor Garcia\\OneDrive\\Escritorio\\DAM2\\M6\\UF2\\M6PoligonEricGarcia_JesusSaez\\M6Poligon\\M6Poligon\\CLASSES\\ClPentagono.cs",
+              "RelativeDocumentMoniker": "M6Poligon\\CLASSES\\ClPentagono.cs",
+              "ToolTip": "C:\\Users\\Victor Garcia\\OneDrive\\Escritorio\\DAM2\\M6\\UF2\\M6PoligonEricGarcia_JesusSaez\\M6Poligon\\M6Poligon\\CLASSES\\ClPentagono.cs",
+              "RelativeToolTip": "M6Poligon\\CLASSES\\ClPentagono.cs",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAwwHEAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T14:30:42.449Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ClOctogono.cs",
+              "DocumentMoniker": "C:\\Users\\Victor Garcia\\OneDrive\\Escritorio\\DAM2\\M6\\UF2\\M6PoligonEricGarcia_JesusSaez\\M6Poligon\\M6Poligon\\CLASSES\\ClOctogono.cs",
+              "RelativeDocumentMoniker": "M6Poligon\\CLASSES\\ClOctogono.cs",
+              "ToolTip": "C:\\Users\\Victor Garcia\\OneDrive\\Escritorio\\DAM2\\M6\\UF2\\M6PoligonEricGarcia_JesusSaez\\M6Poligon\\M6Poligon\\CLASSES\\ClOctogono.cs",
+              "RelativeToolTip": "M6Poligon\\CLASSES\\ClOctogono.cs",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAwwHMAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T14:30:41.618Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ClHexagono.cs",
+              "DocumentMoniker": "C:\\Users\\Victor Garcia\\OneDrive\\Escritorio\\DAM2\\M6\\UF2\\M6PoligonEricGarcia_JesusSaez\\M6Poligon\\M6Poligon\\CLASSES\\ClHexagono.cs",
+              "RelativeDocumentMoniker": "M6Poligon\\CLASSES\\ClHexagono.cs",
+              "ToolTip": "C:\\Users\\Victor Garcia\\OneDrive\\Escritorio\\DAM2\\M6\\UF2\\M6PoligonEricGarcia_JesusSaez\\M6Poligon\\M6Poligon\\CLASSES\\ClHexagono.cs",
+              "RelativeToolTip": "M6Poligon\\CLASSES\\ClHexagono.cs",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAwwG4AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T14:30:40.179Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ClTriangleRectangle.cs",
+              "DocumentMoniker": "C:\\Users\\Victor Garcia\\OneDrive\\Escritorio\\DAM2\\M6\\UF2\\M6PoligonEricGarcia_JesusSaez\\M6Poligon\\M6Poligon\\CLASSES\\ClTriangleRectangle.cs",
+              "RelativeDocumentMoniker": "M6Poligon\\CLASSES\\ClTriangleRectangle.cs",
+              "ToolTip": "C:\\Users\\Victor Garcia\\OneDrive\\Escritorio\\DAM2\\M6\\UF2\\M6PoligonEricGarcia_JesusSaez\\M6Poligon\\M6Poligon\\CLASSES\\ClTriangleRectangle.cs",
+              "RelativeToolTip": "M6Poligon\\CLASSES\\ClTriangleRectangle.cs",
+              "ViewState": "AgIAAEoAAAAAAAAAAAA9wGEAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T14:29:50.589Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ClTriangleIsosceles.cs",
+              "DocumentMoniker": "C:\\Users\\Victor Garcia\\OneDrive\\Escritorio\\DAM2\\M6\\UF2\\M6PoligonEricGarcia_JesusSaez\\M6Poligon\\M6Poligon\\CLASSES\\ClTriangleIsosceles.cs",
+              "RelativeDocumentMoniker": "M6Poligon\\CLASSES\\ClTriangleIsosceles.cs",
+              "ToolTip": "C:\\Users\\Victor Garcia\\OneDrive\\Escritorio\\DAM2\\M6\\UF2\\M6PoligonEricGarcia_JesusSaez\\M6Poligon\\M6Poligon\\CLASSES\\ClTriangleIsosceles.cs",
+              "RelativeToolTip": "M6Poligon\\CLASSES\\ClTriangleIsosceles.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAswGAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T14:29:49.836Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ClElipse.cs",
+              "DocumentMoniker": "C:\\Users\\Victor Garcia\\OneDrive\\Escritorio\\DAM2\\M6\\UF2\\M6PoligonEricGarcia_JesusSaez\\M6Poligon\\M6Poligon\\CLASSES\\ClElipse.cs",
+              "RelativeDocumentMoniker": "M6Poligon\\CLASSES\\ClElipse.cs",
+              "ToolTip": "C:\\Users\\Victor Garcia\\OneDrive\\Escritorio\\DAM2\\M6\\UF2\\M6PoligonEricGarcia_JesusSaez\\M6Poligon\\M6Poligon\\CLASSES\\ClElipse.cs",
+              "RelativeToolTip": "M6Poligon\\CLASSES\\ClElipse.cs",
+              "ViewState": "AgIAAFwAAAAAAAAAAAD4v3AAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T14:26:56.918Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ClRombo.cs",
+              "DocumentMoniker": "C:\\Users\\Victor Garcia\\OneDrive\\Escritorio\\DAM2\\M6\\UF2\\M6PoligonEricGarcia_JesusSaez\\M6Poligon\\M6Poligon\\CLASSES\\ClRombo.cs",
+              "RelativeDocumentMoniker": "M6Poligon\\CLASSES\\ClRombo.cs",
+              "ToolTip": "C:\\Users\\Victor Garcia\\OneDrive\\Escritorio\\DAM2\\M6\\UF2\\M6PoligonEricGarcia_JesusSaez\\M6Poligon\\M6Poligon\\CLASSES\\ClRombo.cs",
+              "RelativeToolTip": "M6Poligon\\CLASSES\\ClRombo.cs",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAQwGIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T12:16:13.839Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "ClCercle.cs",
               "DocumentMoniker": "C:\\Users\\Victor Garcia\\OneDrive\\Escritorio\\DAM2\\M6\\UF2\\M6PoligonEricGarcia_JesusSaez\\M6Poligon\\M6Poligon\\CLASSES\\ClCercle.cs",
               "RelativeDocumentMoniker": "M6Poligon\\CLASSES\\ClCercle.cs",
               "ToolTip": "C:\\Users\\Victor Garcia\\OneDrive\\Escritorio\\DAM2\\M6\\UF2\\M6PoligonEricGarcia_JesusSaez\\M6Poligon\\M6Poligon\\CLASSES\\ClCercle.cs",
               "RelativeToolTip": "M6Poligon\\CLASSES\\ClCercle.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAcwCwAAABkAAAAAAAAAA==",
+              "ViewState": "AgIAAEIAAAAAAAAAAAD4v1sAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-12T11:59:11.073Z",
               "EditorCaption": ""

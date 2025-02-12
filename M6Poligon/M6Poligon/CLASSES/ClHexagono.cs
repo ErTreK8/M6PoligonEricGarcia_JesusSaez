@@ -109,26 +109,5 @@ namespace M6Poligon.CLASSES
 
         public override double Area() => (3 * Math.Sqrt(3) / 2) * Math.Pow(mida, 2);
         public override double Perimetre() => 6 * mida;
-        public override void elimina() { }
-        //public bool getPoligons(ref int xancho, ref int xaltura)
-        //{
-        //    Boolean xb = false;
-        //    String xsql = "";
-        //    DataSet xdset = new DataSet();
-
-        //    xsql = $"SELECT * FROM tbRectangles WHERE id = '{Id}'";
-
-        //    bd.Consulta(xsql, ref xdset);
-
-        //    if (xdset.Tables[0].Rows.Count > 0)
-        //    {
-        //        this.Id = (int)xdset.Tables[0].Rows[0].ItemArray[1];
-        //        xancho = (int)xdset.Tables[0].Rows[0].ItemArray[2];
-        //        xaltura = (int)xdset.Tables[0].Rows[0].ItemArray[3];
-        //        xb = true;
-        //    }
-
-        //    return xb;
-        //}
     }
 }

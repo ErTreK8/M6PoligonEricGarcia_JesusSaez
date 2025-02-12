@@ -103,10 +103,6 @@ namespace M6Poligon.CLASSES
         {
             return (mida* mida);
         }
-        public override void elimina ()
-        {
-            //Aqui lo de borrar de la db
-        }
         public override Double Perimetre()
         {
             return mida * 4;

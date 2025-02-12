@@ -92,7 +92,7 @@ namespace M6Poligon.CLASSES
             ancho = xancho;
             altura = xaltura;
 
-            String xsql = $"INSERT INTO tbRectangle(idPoligon, base, altura) VALUES ({Id}, {ancho}, {altura})";
+            String xsql = $"INSERT INTO tbRectangle(idPoligon, x, y) VALUES ({Id}, {ancho}, {altura})";
 
             if (xbd.executarOrdre(xsql))
             {
@@ -109,10 +109,7 @@ namespace M6Poligon.CLASSES
         {
             return (altura * ancho);
         }
-        public override void elimina()
-        {
-            //Aqui lo de borrar de la db
-        }
+
         public override Double Perimetre()
         {
             return ((altura*2)+(ancho*2));

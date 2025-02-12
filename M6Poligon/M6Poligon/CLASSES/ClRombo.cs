@@ -20,7 +20,7 @@ namespace M6Poligon.CLASSES
             ancho = xancho;
             altura = xaltura;
 
-            String xsql = $"INSERT INTO tbRombe(idPoligon, base, altura) VALUES ({Id}, {ancho}, {altura})";
+            String xsql = $"INSERT INTO tbRombe(idPoligon, x, y) VALUES ({Id}, {ancho}, {altura})";
 
             if (xbd.executarOrdre(xsql))
             {
@@ -96,6 +96,5 @@ namespace M6Poligon.CLASSES
 
         public override Double Area() => ancho * altura;
         public override Double Perimetre() => 2 * (Math.Sqrt(Math.Pow(ancho / 2.0, 2) + Math.Pow(altura / 2.0, 2))) * 4;
-        public override void elimina() { }
     }
 }

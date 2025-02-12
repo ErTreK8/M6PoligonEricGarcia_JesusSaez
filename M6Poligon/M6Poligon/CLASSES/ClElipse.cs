@@ -92,7 +92,7 @@ namespace M6Poligon.CLASSES
             ancho = xancho;
             altura = xaltura;
 
-            String xsql = $"INSERT INTO tbElipse(idPoligon, base, altura) VALUES ({Id}, {ancho}, {altura})";
+            String xsql = $"INSERT INTO tbElipse(idPoligon, x, y) VALUES ({Id}, {ancho}, {altura})";
 
             if (xbd.executarOrdre(xsql))
             {
@@ -110,10 +110,7 @@ namespace M6Poligon.CLASSES
             // Área = π * a * b
             return Math.PI * a * b;
         }
-        public override void elimina()
-        {
-
-        }
+       
         public override Double Perimetre()
         {
             double a = ancho / 2.0;
@@ -123,25 +120,5 @@ namespace M6Poligon.CLASSES
             // Jaume no me pongas mates porfa q dan pereza :(
             return Math.PI * (3 * (a + b) - Math.Sqrt((3 * a + b) * (a + 3 * b)));
         }
-        //public bool getPoligons(ref int xancho, ref int xaltura)
-        //{
-        //    Boolean xb = false;
-        //    String xsql = "";
-        //    DataSet xdset = new DataSet();
-
-        //    xsql = $"SELECT * FROM tbRectangles WHERE id = '{Id}'";
-
-        //    bd.Consulta(xsql, ref xdset);
-
-        //    if (xdset.Tables[0].Rows.Count > 0)
-        //    {
-        //        this.Id = (int)xdset.Tables[0].Rows[0].ItemArray[1];
-        //        xancho = (int)xdset.Tables[0].Rows[0].ItemArray[2];
-        //        xaltura = (int)xdset.Tables[0].Rows[0].ItemArray[3];
-        //        xb = true;
-        //    }
-
-        //    return xb;
-        //}
     }
 }

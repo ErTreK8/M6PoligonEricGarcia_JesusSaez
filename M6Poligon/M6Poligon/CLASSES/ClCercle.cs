@@ -87,10 +87,6 @@ namespace M6Poligon.CLASSES
             // Área = π * a * b
             return Math.PI * (radio*radio);
         }
-        public override void elimina()
-        {
-
-        }
         public override Double Perimetre()
         {
             double radio = mida / 2.0;

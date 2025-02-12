@@ -88,7 +88,6 @@ namespace M6Poligon.CLASSES
             }
         }
 
-        public abstract void elimina();
         public abstract Double Area();
         public abstract Double Perimetre();
     }

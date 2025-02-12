@@ -20,7 +20,7 @@ namespace M6Poligon.CLASSES
             ancho = xancho;
             altura = xaltura;
 
-            String xsql = $"INSERT INTO tbTriangleIsosceles(idPoligon, base, altura) VALUES ({Id}, {ancho}, {altura})";
+            String xsql = $"INSERT INTO tbTriangleIsosceles(idPoligon, x, y) VALUES ({Id}, {ancho}, {altura})";
 
             if (xbd.executarOrdre(xsql))
             {
@@ -94,6 +94,5 @@ namespace M6Poligon.CLASSES
 
         public override Double Area() => (ancho * altura) / 2.0;
         public override Double Perimetre() => ancho + 2 * Math.Sqrt(Math.Pow(altura, 2) + Math.Pow(ancho / 2.0, 2));
-        public override void elimina() { }
     }
 }

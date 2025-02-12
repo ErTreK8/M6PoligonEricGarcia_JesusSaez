@@ -22,7 +22,6 @@ namespace M6Poligon
         ClBDSqlServer bd;
         DataSet dset;
         Boolean tots = true;
-        List <ClPoligon> llPoligons { get; set; } = new List<ClPoligon>();
         ClQuadrat quadrats { get; set; }
         ClRectangle rectangles { get; set; }
         ClPentagono pentagons { get; set; }
