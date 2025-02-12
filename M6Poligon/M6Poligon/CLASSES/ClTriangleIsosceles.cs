@@ -1,6 +1,7 @@
 ﻿using CLASSES;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,7 +20,7 @@ namespace M6Poligon.CLASSES
             ancho = xancho;
             altura = xaltura;
 
-            String xsql = $"INSERT INTO Rectangles(id, base, altura) VALUES ({Id}, {ancho}, {altura})";
+            String xsql = $"INSERT INTO tbTriangleIsosceles(idPoligon, base, altura) VALUES ({Id}, {ancho}, {altura})";
 
             if (xbd.executarOrdre(xsql))
             {
@@ -42,6 +43,32 @@ namespace M6Poligon.CLASSES
             this.ancho = ancho;
             this.altura = altura;
             dibuixarFigura();
+        }
+
+        public ClTriangleIsosceles(ClBDSqlServer xbd, int xid, ref int xaltura, ref int xancho) : base(xbd, xid)
+        {
+            getPoligons(ref xancho, ref xaltura);
+        }
+
+        public bool getPoligons(ref int xancho, ref int xaltura)
+        {
+            Boolean xb = false;
+            String xsql = "";
+            DataSet xdset = new DataSet();
+
+            xsql = $"SELECT * FROM tbTriangleIsosceles WHERE idPoligon = '{Id}'";
+
+            bd.Consulta(xsql, ref xdset);
+
+            if (xdset.Tables[0].Rows.Count > 0)
+            {
+                this.Id = (int)xdset.Tables[0].Rows[0].ItemArray[1];
+                xancho = (int)xdset.Tables[0].Rows[0].ItemArray[2];
+                xaltura = (int)xdset.Tables[0].Rows[0].ItemArray[3];
+                xb = true;
+            }
+
+            return xb;
         }
 
         private void dibuixarFigura()
@@ -68,6 +95,5 @@ namespace M6Poligon.CLASSES
         public override Double Area() => (ancho * altura) / 2.0;
         public override Double Perimetre() => ancho + 2 * Math.Sqrt(Math.Pow(altura, 2) + Math.Pow(ancho / 2.0, 2));
         public override void elimina() { }
-        public bool getPoligons(ClBDSqlServer bd, int idPoligon) => false;
     }
 }

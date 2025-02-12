@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbInfo = new System.Windows.Forms.Label();
             this.lbGrup = new System.Windows.Forms.Label();
             this.cbGrup = new System.Windows.Forms.ComboBox();
@@ -37,6 +37,8 @@
             this.pnlFormas = new System.Windows.Forms.Panel();
             this.btDel = new System.Windows.Forms.Button();
             this.btOK = new System.Windows.Forms.Button();
+            this.lbArea = new System.Windows.Forms.Label();
+            this.lbPerimetro = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgPoligons)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,7 +49,7 @@
             this.lbInfo.Location = new System.Drawing.Point(554, 62);
             this.lbInfo.Name = "lbInfo";
             this.lbInfo.Padding = new System.Windows.Forms.Padding(3);
-            this.lbInfo.Size = new System.Drawing.Size(513, 25);
+            this.lbInfo.Size = new System.Drawing.Size(745, 25);
             this.lbInfo.TabIndex = 12;
             this.lbInfo.Text = "Poligon";
             this.lbInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -91,9 +93,9 @@
             this.dgPoligons.AllowUserToAddRows = false;
             this.dgPoligons.AllowUserToDeleteRows = false;
             this.dgPoligons.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Yellow;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            this.dgPoligons.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.dgPoligons.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgPoligons.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgPoligons.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgPoligons.Location = new System.Drawing.Point(12, 90);
@@ -123,7 +125,7 @@
             // 
             this.pnlFormas.Location = new System.Drawing.Point(568, 105);
             this.pnlFormas.Name = "pnlFormas";
-            this.pnlFormas.Size = new System.Drawing.Size(499, 401);
+            this.pnlFormas.Size = new System.Drawing.Size(731, 533);
             this.pnlFormas.TabIndex = 13;
             // 
             // btDel
@@ -146,12 +148,35 @@
             this.btOK.TabIndex = 14;
             this.btOK.Text = "ADD";
             this.btOK.UseVisualStyleBackColor = false;
+            this.btOK.Click += new System.EventHandler(this.btOK_Click);
+            // 
+            // lbArea
+            // 
+            this.lbArea.AutoSize = true;
+            this.lbArea.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbArea.Location = new System.Drawing.Point(564, 693);
+            this.lbArea.Name = "lbArea";
+            this.lbArea.Size = new System.Drawing.Size(58, 22);
+            this.lbArea.TabIndex = 16;
+            this.lbArea.Text = "Area: ";
+            // 
+            // lbPerimetro
+            // 
+            this.lbPerimetro.AutoSize = true;
+            this.lbPerimetro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPerimetro.Location = new System.Drawing.Point(1000, 693);
+            this.lbPerimetro.Name = "lbPerimetro";
+            this.lbPerimetro.Size = new System.Drawing.Size(97, 22);
+            this.lbPerimetro.TabIndex = 17;
+            this.lbPerimetro.Text = "Perimetro: ";
             // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1115, 745);
+            this.ClientSize = new System.Drawing.Size(1419, 745);
+            this.Controls.Add(this.lbPerimetro);
+            this.Controls.Add(this.lbArea);
             this.Controls.Add(this.btDel);
             this.Controls.Add(this.btOK);
             this.Controls.Add(this.pnlFormas);
@@ -162,9 +187,11 @@
             this.Controls.Add(this.lbPersonatges);
             this.Name = "FrmMain";
             this.Text = "Poligons";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgPoligons)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -178,6 +205,8 @@
         private System.Windows.Forms.Panel pnlFormas;
         private System.Windows.Forms.Button btDel;
         private System.Windows.Forms.Button btOK;
+        private System.Windows.Forms.Label lbArea;
+        private System.Windows.Forms.Label lbPerimetro;
     }
 }
 

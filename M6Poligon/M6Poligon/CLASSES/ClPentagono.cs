@@ -13,7 +13,7 @@ namespace M6Poligon.CLASSES
     public class ClPentagono : ClPoligon
     {
         private int mida;
-        private Point[] vertices;
+        private PointF[] vertices;
 
         public ClPentagono(Panel xpnlPare, int xmida) : base(xpnlPare)
         {
@@ -27,9 +27,51 @@ namespace M6Poligon.CLASSES
             dibuixarFigura();
         }
 
+        public ClPentagono(ClBDSqlServer xbd, int xid, ref int xmida) : base(xbd, xid)
+        {
+            getPoligons(ref xmida);
+        }
+        public bool getPoligons(ref int xmida)
+        {
+            Boolean xb = false;
+            String xsql = "";
+            DataSet xdset = new DataSet();
+
+            xsql = $"SELECT * FROM tbPentagon WHERE idPoligon = '{Id}'";
+
+            bd.Consulta(xsql, ref xdset);
+
+            if (xdset.Tables[0].Rows.Count > 0)
+            {
+                this.Id = (int)xdset.Tables[0].Rows[0].ItemArray[1];
+                xmida = (int)xdset.Tables[0].Rows[0].ItemArray[2];
+                xb = true;
+            }
+
+            return xb;
+        }
+
+        private PointF[] calcularVerticesPentagon(Point posCentre, int mida)
+        {
+            PointF[] vertices = new PointF[5];
+            float radio = mida / 2f; // La distancia desde el centro a los vértices
+            float anguloInicial = -(float)Math.PI / 2; // Inicia con el vértice superior
+
+            for (int i = 0; i < 5; i++)
+            {
+                float angulo = (float)(anguloInicial + i * (2 * Math.PI / 5));
+                float x = posCentre.X + radio * (float)Math.Cos(angulo);
+                float y = posCentre.Y + radio * (float)Math.Sin(angulo);
+                vertices[i] = new PointF(x, y);
+            }
+
+            return vertices;
+        }
+
         private void dibuixarFigura()
         {
-            vertices = calcularVerticesPentagon(posCentre, mida);
+            vertices = calcularVerticesPentagon(new Point(mida, mida), mida); // Centra dentro del panel
+
             pnl.Size = new Size(mida * 2, mida * 2);
             pnl.Location = new Point(posCentre.X - mida, posCentre.Y - mida);
             pnl.Paint += new PaintEventHandler(ferPentagono);
@@ -40,25 +82,15 @@ namespace M6Poligon.CLASSES
         private void ferPentagono(object sender, PaintEventArgs e)
         {
             Pen p = new Pen(Color.Black, 2);
+            Graphics g = e.Graphics;
+
+            g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias; // Suaviza los bordes
+
             if (colorInterior != Color.Empty)
             {
-                e.Graphics.FillPolygon(new SolidBrush(colorInterior), vertices);
+                g.FillPolygon(new SolidBrush(colorInterior), vertices);
             }
-            e.Graphics.DrawPolygon(p, vertices);
-        }
-
-        private Point[] calcularVerticesPentagon(Point center, int size)
-        {
-            Point[] points = new Point[5];
-            for (int i = 0; i < 5; i++)
-            {
-                double angle = -Math.PI / 2 + (2 * Math.PI * i / 5);
-                points[i] = new Point(
-                    center.X + (int)(size * Math.Cos(angle)),
-                    center.Y + (int)(size * Math.Sin(angle))
-                );
-            }
-            return points;
+            g.DrawPolygon(p, vertices);
         }
 
         public ClPentagono(ClBDSqlServer xbd, string xnom, string xtipo, string xColor, string xPle, int xmida) : base(xbd, xnom, xtipo, xColor, xPle)
@@ -66,7 +98,7 @@ namespace M6Poligon.CLASSES
             mida = xmida;
 
 
-            String xsql = $"INSERT INTO tbPentagono(id, mida, ) VALUES ({Id}, {xmida},)";
+            String xsql = $"INSERT INTO tbPentagon(idPoligon, mida) VALUES ({Id}, {xmida})";
 
             if (xbd.executarOrdre(xsql))
             {

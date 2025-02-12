@@ -25,6 +25,29 @@ namespace M6Poligon.CLASSES
             dibuixarFigura();
         }
 
+        public ClQuadrat(ClBDSqlServer xbd, int xid, ref int xmida) : base(xbd, xid)
+        {
+            getPoligons(ref xmida);
+        }
+        public bool getPoligons(ref int xmida)
+        {
+            Boolean xb = false;
+            String xsql = "";
+            DataSet xdset = new DataSet();
+
+            xsql = $"SELECT * FROM tbQuadrat WHERE idPoligon = '{Id}'";
+
+            bd.Consulta(xsql, ref xdset);
+
+            if (xdset.Tables[0].Rows.Count > 0)
+            {
+                this.Id = (int)xdset.Tables[0].Rows[0].ItemArray[1];
+                xmida = (int)xdset.Tables[0].Rows[0].ItemArray[2];
+                xb = true;
+            }
+
+            return xb;
+        }
 
         // constructor Con color
         public ClQuadrat(Panel xpnlPare, Color xcolor, int xmida) : base(xpnlPare, xcolor)
@@ -63,7 +86,7 @@ namespace M6Poligon.CLASSES
             mida = xmida;
 
 
-            String xsql = $"INSERT INTO Rectangles(id, mida, ) VALUES ({Id}, {xmida},)";
+            String xsql = $"INSERT INTO tbQuadrat(idPoligon, mida) VALUES ({Id}, {xmida})";
 
             if (xbd.executarOrdre(xsql))
             {

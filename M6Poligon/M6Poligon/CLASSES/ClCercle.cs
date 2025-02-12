@@ -68,7 +68,7 @@ namespace M6Poligon.CLASSES
             mida = xmida;
 
 
-            String xsql = $"INSERT INTO Rectangles(id, mida, ) VALUES ({Id}, {xmida},)";
+            String xsql = $"INSERT INTO tbCercle(idPoligon, mida) VALUES ({Id}, {xmida})";
 
             if (xbd.executarOrdre(xsql))
             {
@@ -103,7 +103,7 @@ namespace M6Poligon.CLASSES
             String xsql = "";
             DataSet xdset = new DataSet();
 
-            xsql = $"SELECT * FROM tbCercle WHERE id = '{Id}'";
+            xsql = $"SELECT * FROM tbCercle WHERE idPoligon = '{Id}'";
 
             bd.Consulta(xsql, ref xdset);
 

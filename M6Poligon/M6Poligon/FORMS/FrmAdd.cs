@@ -17,6 +17,7 @@ namespace M6Poligon.FORMS
     {
         String poligon = "Cercle";
         ClBDSqlServer bd;
+        int ple;
         public FrmAdd(ClBDSqlServer xbd)
         {
             InitializeComponent();
@@ -33,6 +34,9 @@ namespace M6Poligon.FORMS
         private void FrmAdd_Load(object sender, EventArgs e)
         {
             tbNom.MaxLength = 50;
+            nUDAlcada.Enabled = false;
+            nUDAmplada.Enabled = false;
+            nupMida.Enabled = true;
 
         }
 
@@ -41,6 +45,18 @@ namespace M6Poligon.FORMS
             if (((RadioButton)sender).Checked)
             {
                 poligon = ((RadioButton)sender).Text;
+            }
+            if (poligon=="Cercle" || poligon == "Quadrat" || poligon == "Pentagon" || poligon == "Hexagon" || poligon == "Octagon")
+            {
+                nUDAlcada.Enabled=false;
+                nUDAmplada.Enabled=false;
+                nupMida.Enabled = true;
+            }
+            else
+            {
+                nUDAlcada.Enabled = true;
+                nUDAmplada.Enabled = true;
+                nupMida.Enabled = false;
             }
         }
 
@@ -57,79 +73,51 @@ namespace M6Poligon.FORMS
             }
             else
             {
-                //if(chkPle.Checked)
-                //{
-                //    switch (poligon)
-                //    {
-                //        case "Cercle":
-                //            ClCercle cer = new ClCercle();
-                //            break;
-                //        case "Elfs":
-                //            ClElf elf = new ClElf(bd, tbNom.Text, strength, intelligence, grup, R.Next(1200, 10000), 1, R.Next(1000, 100000) / 100, llColorsCabell[R.Next(0, llColorsCabell.Count)], R.Next(0, 101));
-                //            break;
-                //        case "Hobbits":
-                //            ClRectangle hob = new ClRectangle(bd, tbNom.Text, poligon, "BLACK" , 1, (int)nUDAmplada.Value, (int)nUDAlcada.Value);
-                //            break;
-                //        case "Humans":
-                //            ClHuma hum = new ClHuma(bd, tbNom.Text, strength, intelligence, grup, R.Next(90, 121), llCaracterístiques[R.Next(0, llCaracterístiques.Count)], 1, R.Next(0, 101), llTerresHumans[R.Next(0, llTerresHumans.Count)]);
-                //            break;
-                //        case "Mags":
-                //            ClMag mag = new ClMag(bd, tbNom.Text, strength, intelligence, grup, R.Next(0, 101), R.Next(1500, 5001), 1, llColorsCapa[R.Next(0, llColorsCapa.Count)], R.Next(0, 101));
-                //            break;
-                //        case "Nans":
-                //            ClNan nan = new ClNan(bd, tbNom.Text, strength, intelligence, grup, R.Next(100, 501), R.Next(0, 101), 1, llClansNans[R.Next(0, llClansNans.Count)]);
-                //            break;
-                //        case "Nazguls":
-                //            ClNazgul naz = new ClNazgul(bd, tbNom.Text, strength, intelligence, grup, R.Next(0, 101), R.Next(0, 2), R.Next(0, 101), llMunturaNazguls[R.Next(0, llMunturaNazguls.Count)], R.Next(0, 101));
-                //            break;
-                //        case "Orcs":
-                //            ClOrc orc = new ClOrc(bd, tbNom.Text, strength, intelligence, grup, R.Next(0, 2), R.Next(0, 101), llColorsPellOrcs[R.Next(0, llColorsPellOrcs.Count)], R.Next(0, 101));
-                //            break;
-                //        case "Trolls":
-                //            ClTroll tro = new ClTroll(bd, tbNom.Text, strength, intelligence, grup, R.Next(1, 4), 1, llPellsTrolls[R.Next(0, llPellsTrolls.Count)]);
-                //            break;
-                //        case "Uruk Hais":
-                //            ClUrukHai uru = new ClUrukHai(bd, tbNom.Text, strength, intelligence, grup.Replace(" ", ""), 1, R.Next(0, 101), llArmesUrukHai[R.Next(0, llArmesUrukHai.Count)], R.Next(190, 261));
-                //            break;
-                //    }
-                //}
-                //else
-                //{
-                //    switch (poligon)
-                //    {
-                //        case "Cercle":
-                //            ClCercle cer = new ClCercle(,);
-                //            break;
-                //        case "Elfs":
-                //            ClElf elf = new ClElf(bd, tbNom.Text, strength, intelligence, grup, R.Next(1200, 10000), 1, R.Next(1000, 100000) / 100, llColorsCabell[R.Next(0, llColorsCabell.Count)], R.Next(0, 101));
-                //            break;
-                //        case "Hobbits":
-                //            ClHobbit hob = new ClHobbit(bd, tbNom.Text, strength, intelligence, grup, R.Next(90, 121), R.Next(20, 101), 1, "La Comarca", R.Next(0, 101));
-                //            break;
-                //        case "Humans":
-                //            ClHuma hum = new ClHuma(bd, tbNom.Text, strength, intelligence, grup, R.Next(90, 121), llCaracterístiques[R.Next(0, llCaracterístiques.Count)], 1, R.Next(0, 101), llTerresHumans[R.Next(0, llTerresHumans.Count)]);
-                //            break;
-                //        case "Mags":
-                //            ClMag mag = new ClMag(bd, tbNom.Text, strength, intelligence, grup, R.Next(0, 101), R.Next(1500, 5001), 1, llColorsCapa[R.Next(0, llColorsCapa.Count)], R.Next(0, 101));
-                //            break;
-                //        case "Nans":
-                //            ClNan nan = new ClNan(bd, tbNom.Text, strength, intelligence, grup, R.Next(100, 501), R.Next(0, 101), 1, llClansNans[R.Next(0, llClansNans.Count)]);
-                //            break;
-                //        case "Nazguls":
-                //            ClNazgul naz = new ClNazgul(bd, tbNom.Text, strength, intelligence, grup, R.Next(0, 101), R.Next(0, 2), R.Next(0, 101), llMunturaNazguls[R.Next(0, llMunturaNazguls.Count)], R.Next(0, 101));
-                //            break;
-                //        case "Orcs":
-                //            ClOrc orc = new ClOrc(bd, tbNom.Text, strength, intelligence, grup, R.Next(0, 2), R.Next(0, 101), llColorsPellOrcs[R.Next(0, llColorsPellOrcs.Count)], R.Next(0, 101));
-                //            break;
-                //        case "Trolls":
-                //            ClTroll tro = new ClTroll(bd, tbNom.Text, strength, intelligence, grup, R.Next(1, 4), 1, llPellsTrolls[R.Next(0, llPellsTrolls.Count)]);
-                //            break;
-                //        case "Uruk Hais":
-                //            ClUrukHai uru = new ClUrukHai(bd, tbNom.Text, strength, intelligence, grup.Replace(" ", ""), 1, R.Next(0, 101), llArmesUrukHai[R.Next(0, llArmesUrukHai.Count)], R.Next(190, 261));
-                //            break;
-                //    }
-                //}
+                object p;
+                if (chkPle.Checked)
+                {
+                    ple = 1;
+                }
+                else
+                {
+                    ple = 0;
+                }
+                switch (poligon)
+                    {
+                    case "Cercle":
+                        p = new ClCercle(bd, tbNom.Text.ToString(), poligon, "#FF5733", ple.ToString(), (int)nupMida.Value);
+                        break;
+                    case "Quadrat":
+                        p = new ClQuadrat(bd, tbNom.Text.ToString(), poligon, "#FF5733", ple.ToString(), (int)nupMida.Value);
+                        break;
+                    case "Rectangle":
+                        p = new ClRectangle(bd, tbNom.Text.ToString(), poligon, "#FF5733", ple.ToString(),(int)nUDAmplada.Value, (int)nUDAlcada.Value);
+                        break;
+                    case "Elipse":
+                        p = new ClElipse(bd, tbNom.Text.ToString(), poligon, "#FF5733", ple.ToString(), (int)nUDAmplada.Value, (int)nUDAlcada.Value);
+                        break;
+                    case "Triangle rectangle":
+                        p = new ClTriangleRectangle(bd, tbNom.Text.ToString(), poligon, "#FF5733", ple.ToString(), (int)nUDAmplada.Value, (int)nUDAlcada.Value);
+                        break;
+                    case "Triangle isosceles":
+                        p = new ClTriangleIsosceles(bd, tbNom.Text.ToString(), poligon, "#FF5733", ple.ToString(), (int)nUDAmplada.Value, (int)nUDAlcada.Value);
+                        break;
+                    case "Rombe":
+                        p = new ClRombo(bd, tbNom.Text.ToString(), poligon, "#FF5733", ple.ToString(), (int)nUDAmplada.Value, (int)nUDAlcada.Value);
+                        break;
+                    case "Pentagon":
+                        p = new ClPentagono(bd, tbNom.Text.ToString(), poligon, "#FF5733", ple.ToString(), (int)nupMida.Value);
+                        break;
+                    case "Hexagon":
+                        p = new ClHexagono(bd, tbNom.Text.ToString(), poligon, "#FF5733", ple.ToString(), (int)nupMida.Value);
+                        break;
+                    case "Octagon":
+                        p = new ClOctogono(bd, tbNom.Text.ToString(), poligon, "#FF5733", ple.ToString(), (int)nupMida.Value);
+                        break;
+                }
+                p = null;
             }
+                
         }
     }
 }

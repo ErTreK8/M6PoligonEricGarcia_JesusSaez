@@ -58,21 +58,32 @@ namespace M6Poligon.CLASSES
         public ClPoligon(ClBDSqlServer xbd, String xname, String xtipo, String xColor, String xPle)
         {
             DataSet xdset = new DataSet();
-            String xsql = $"INSERT INTO Poligonos(nombre, color, forma, ple) VALUES ('{xname}','{xColor}','{xtipo}','{xPle}')";
+            String xsql = $"SELECT nombre from tbPoligon where nombre ='{xname}'";
+            xbd.Consulta(xsql, ref xdset);
 
-            if (xbd.executarOrdre(xsql))
+            if (xdset.Tables[0].Rows.Count != 0)
             {
-                xsql = "SELECT TOP 1 id FROM tbPoligon ORDER BY id DESC";
-                xbd.Consulta(xsql, ref xdset);
+                MessageBox.Show("Ya hi ha un Poligon amb aquest nom", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                xdset=new DataSet();
+                xsql = $"INSERT INTO tbPoligon(nombre, color, forma, ple) VALUES ('{xname}','{xColor}','{xtipo}','{xPle}')";
 
-                if (xdset.Tables[0].Rows.Count == 0)
+                if (xbd.executarOrdre(xsql))
                 {
-                    Id = -1;
-                    MessageBox.Show("No s'ha pogut recuperar l'Id del nou poligono", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
-                    Id = (int)xdset.Tables[0].Rows[0].ItemArray[0];
+                    xsql = "SELECT TOP 1 idPoligon FROM tbPoligon ORDER BY idPoligon DESC";
+                    xbd.Consulta(xsql, ref xdset);
+
+                    if (xdset.Tables[0].Rows.Count == 0)
+                    {
+                        Id = -1;
+                        MessageBox.Show("No s'ha pogut recuperar l'Id del nou poligono", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        Id = (int)xdset.Tables[0].Rows[0].ItemArray[0];
+                    }
                 }
             }
         }

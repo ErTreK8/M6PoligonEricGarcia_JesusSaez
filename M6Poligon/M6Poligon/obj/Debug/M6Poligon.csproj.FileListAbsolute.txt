@@ -14,3 +14,19 @@ C:\Users\Jesus\Desktop\COSAS_DEL_SEGUNDO_AÑO\M6\UF5\M6PoligonEricGarcia_JesusSa
 C:\Users\Jesus\Desktop\COSAS_DEL_SEGUNDO_AÑO\M6\UF5\M6PoligonEricGarcia_JesusSaez\M6Poligon\M6Poligon\obj\Debug\M6Poligon.csproj.Up2Date
 C:\Users\Jesus\Desktop\COSAS_DEL_SEGUNDO_AÑO\M6\UF5\M6PoligonEricGarcia_JesusSaez\M6Poligon\M6Poligon\obj\Debug\M6Poligon.exe
 C:\Users\Jesus\Desktop\COSAS_DEL_SEGUNDO_AÑO\M6\UF5\M6PoligonEricGarcia_JesusSaez\M6Poligon\M6Poligon\obj\Debug\M6Poligon.pdb
+C:\Users\Victor Garcia\OneDrive\Escritorio\DAM2\M6\UF2\M6PoligonEricGarcia_JesusSaez\M6Poligon\M6Poligon\bin\Debug\M6Poligon.exe.config
+C:\Users\Victor Garcia\OneDrive\Escritorio\DAM2\M6\UF2\M6PoligonEricGarcia_JesusSaez\M6Poligon\M6Poligon\bin\Debug\M6Poligon.exe
+C:\Users\Victor Garcia\OneDrive\Escritorio\DAM2\M6\UF2\M6PoligonEricGarcia_JesusSaez\M6Poligon\M6Poligon\bin\Debug\M6Poligon.pdb
+C:\Users\Victor Garcia\OneDrive\Escritorio\DAM2\M6\UF2\M6PoligonEricGarcia_JesusSaez\M6Poligon\M6Poligon\bin\Debug\EntityFramework.dll
+C:\Users\Victor Garcia\OneDrive\Escritorio\DAM2\M6\UF2\M6PoligonEricGarcia_JesusSaez\M6Poligon\M6Poligon\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Victor Garcia\OneDrive\Escritorio\DAM2\M6\UF2\M6PoligonEricGarcia_JesusSaez\M6Poligon\M6Poligon\bin\Debug\EntityFramework.xml
+C:\Users\Victor Garcia\OneDrive\Escritorio\DAM2\M6\UF2\M6PoligonEricGarcia_JesusSaez\M6Poligon\M6Poligon\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Victor Garcia\OneDrive\Escritorio\DAM2\M6\UF2\M6PoligonEricGarcia_JesusSaez\M6Poligon\M6Poligon\obj\Debug\M6Poligon.csproj.AssemblyReference.cache
+C:\Users\Victor Garcia\OneDrive\Escritorio\DAM2\M6\UF2\M6PoligonEricGarcia_JesusSaez\M6Poligon\M6Poligon\obj\Debug\M6Poligon.FORMS.FrmAdd.resources
+C:\Users\Victor Garcia\OneDrive\Escritorio\DAM2\M6\UF2\M6PoligonEricGarcia_JesusSaez\M6Poligon\M6Poligon\obj\Debug\M6Poligon.FrmMain.resources
+C:\Users\Victor Garcia\OneDrive\Escritorio\DAM2\M6\UF2\M6PoligonEricGarcia_JesusSaez\M6Poligon\M6Poligon\obj\Debug\M6Poligon.Properties.Resources.resources
+C:\Users\Victor Garcia\OneDrive\Escritorio\DAM2\M6\UF2\M6PoligonEricGarcia_JesusSaez\M6Poligon\M6Poligon\obj\Debug\M6Poligon.csproj.GenerateResource.cache
+C:\Users\Victor Garcia\OneDrive\Escritorio\DAM2\M6\UF2\M6PoligonEricGarcia_JesusSaez\M6Poligon\M6Poligon\obj\Debug\M6Poligon.csproj.CoreCompileInputs.cache
+C:\Users\Victor Garcia\OneDrive\Escritorio\DAM2\M6\UF2\M6PoligonEricGarcia_JesusSaez\M6Poligon\M6Poligon\obj\Debug\M6Poligon.csproj.Up2Date
+C:\Users\Victor Garcia\OneDrive\Escritorio\DAM2\M6\UF2\M6PoligonEricGarcia_JesusSaez\M6Poligon\M6Poligon\obj\Debug\M6Poligon.exe
+C:\Users\Victor Garcia\OneDrive\Escritorio\DAM2\M6\UF2\M6PoligonEricGarcia_JesusSaez\M6Poligon\M6Poligon\obj\Debug\M6Poligon.pdb

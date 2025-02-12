@@ -43,6 +43,27 @@ namespace M6Poligon.CLASSES
             getPoligons(ref xancho, ref xaltura);
         }
 
+        public bool getPoligons(ref int xancho, ref int xaltura)
+        {
+            Boolean xb = false;
+            String xsql = "";
+            DataSet xdset = new DataSet();
+
+            xsql = $"SELECT * FROM tbRectangle WHERE idPoligon = '{Id}'";
+
+            bd.Consulta(xsql, ref xdset);
+
+            if (xdset.Tables[0].Rows.Count > 0)
+            {
+                this.Id = (int)xdset.Tables[0].Rows[0].ItemArray[1];
+                xancho = (int)xdset.Tables[0].Rows[0].ItemArray[2];
+                xaltura = (int)xdset.Tables[0].Rows[0].ItemArray[3];
+                xb = true;
+            }
+
+            return xb;
+        }
+
         private void dibuixarFigura()
         {
             posVertex = new Point((int)(posCentre.X - (ancho / 2)), (int)(posCentre.Y - (altura / 2)));
@@ -71,7 +92,7 @@ namespace M6Poligon.CLASSES
             ancho = xancho;
             altura = xaltura;
 
-            String xsql = $"INSERT INTO Rectangles(id, base, altura) VALUES ({Id}, {ancho}, {altura})";
+            String xsql = $"INSERT INTO tbRectangle(idPoligon, base, altura) VALUES ({Id}, {ancho}, {altura})";
 
             if (xbd.executarOrdre(xsql))
             {
@@ -98,26 +119,7 @@ namespace M6Poligon.CLASSES
         }
 
 
-        public bool getPoligons(ref int xancho, ref int xaltura)
-        {
-            Boolean xb = false;
-            String xsql = "";
-            DataSet xdset = new DataSet();
-
-            xsql = $"SELECT * FROM tbRectangle WHERE id = '{Id}'";
-
-            bd.Consulta(xsql, ref xdset);
-
-            if (xdset.Tables[0].Rows.Count > 0)
-            {
-                this.Id = (int)xdset.Tables[0].Rows[0].ItemArray[1];
-                xancho = (int)xdset.Tables[0].Rows[0].ItemArray[2];
-                xaltura = (int)xdset.Tables[0].Rows[0].ItemArray[3];
-                xb = true;
-            }
-
-            return xb;
-        }
+        
 
     }
 }

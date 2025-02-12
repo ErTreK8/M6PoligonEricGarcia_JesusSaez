@@ -50,14 +50,19 @@
             this.rdCercle = new System.Windows.Forms.RadioButton();
             this.btOK = new System.Windows.Forms.Button();
             this.btCancel = new System.Windows.Forms.Button();
+            this.lbMida = new System.Windows.Forms.Label();
+            this.nupMida = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nUDAlcada)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nUDAmplada)).BeginInit();
             this.gbGrup.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupMida)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lbMida);
+            this.groupBox1.Controls.Add(this.nupMida);
             this.groupBox1.Controls.Add(this.lbAlcada);
             this.groupBox1.Controls.Add(this.lbAmplada);
             this.groupBox1.Controls.Add(this.lbNom);
@@ -67,7 +72,7 @@
             this.groupBox1.Controls.Add(this.nUDAmplada);
             this.groupBox1.Location = new System.Drawing.Point(23, 257);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(449, 178);
+            this.groupBox1.Size = new System.Drawing.Size(449, 248);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Caracteristiques";
@@ -109,7 +114,7 @@
             // chkPle
             // 
             this.chkPle.AutoSize = true;
-            this.chkPle.Location = new System.Drawing.Point(302, 83);
+            this.chkPle.Location = new System.Drawing.Point(317, 42);
             this.chkPle.Name = "chkPle";
             this.chkPle.Size = new System.Drawing.Size(49, 20);
             this.chkPle.TabIndex = 2;
@@ -120,16 +125,46 @@
             // nUDAlcada
             // 
             this.nUDAlcada.Location = new System.Drawing.Point(114, 121);
+            this.nUDAlcada.Maximum = new decimal(new int[] {
+            250,
+            0,
+            0,
+            0});
+            this.nUDAlcada.Minimum = new decimal(new int[] {
+            25,
+            0,
+            0,
+            0});
             this.nUDAlcada.Name = "nUDAlcada";
             this.nUDAlcada.Size = new System.Drawing.Size(140, 22);
             this.nUDAlcada.TabIndex = 1;
+            this.nUDAlcada.Value = new decimal(new int[] {
+            25,
+            0,
+            0,
+            0});
             // 
             // nUDAmplada
             // 
             this.nUDAmplada.Location = new System.Drawing.Point(114, 81);
+            this.nUDAmplada.Maximum = new decimal(new int[] {
+            250,
+            0,
+            0,
+            0});
+            this.nUDAmplada.Minimum = new decimal(new int[] {
+            25,
+            0,
+            0,
+            0});
             this.nUDAmplada.Name = "nUDAmplada";
             this.nUDAmplada.Size = new System.Drawing.Size(140, 22);
             this.nUDAmplada.TabIndex = 0;
+            this.nUDAmplada.Value = new decimal(new int[] {
+            25,
+            0,
+            0,
+            0});
             // 
             // gbGrup
             // 
@@ -159,9 +194,9 @@
             this.rdOcto.Location = new System.Drawing.Point(302, 196);
             this.rdOcto.Margin = new System.Windows.Forms.Padding(4);
             this.rdOcto.Name = "rdOcto";
-            this.rdOcto.Size = new System.Drawing.Size(86, 20);
+            this.rdOcto.Size = new System.Drawing.Size(79, 20);
             this.rdOcto.TabIndex = 9;
-            this.rdOcto.Text = "Octògons";
+            this.rdOcto.Text = "Octagon";
             this.rdOcto.UseVisualStyleBackColor = true;
             this.rdOcto.CheckedChanged += new System.EventHandler(this.rdCercle_CheckedChanged);
             // 
@@ -171,9 +206,9 @@
             this.rdHexa.Location = new System.Drawing.Point(302, 156);
             this.rdHexa.Margin = new System.Windows.Forms.Padding(4);
             this.rdHexa.Name = "rdHexa";
-            this.rdHexa.Size = new System.Drawing.Size(90, 20);
+            this.rdHexa.Size = new System.Drawing.Size(83, 20);
             this.rdHexa.TabIndex = 8;
-            this.rdHexa.Text = "Hexàgons";
+            this.rdHexa.Text = "Hexagon";
             this.rdHexa.UseVisualStyleBackColor = true;
             this.rdHexa.CheckedChanged += new System.EventHandler(this.rdCercle_CheckedChanged);
             // 
@@ -183,9 +218,9 @@
             this.rdPent.Location = new System.Drawing.Point(302, 117);
             this.rdPent.Margin = new System.Windows.Forms.Padding(4);
             this.rdPent.Name = "rdPent";
-            this.rdPent.Size = new System.Drawing.Size(93, 20);
+            this.rdPent.Size = new System.Drawing.Size(86, 20);
             this.rdPent.TabIndex = 7;
-            this.rdPent.Text = "Pentàgons";
+            this.rdPent.Text = "Pentagon";
             this.rdPent.UseVisualStyleBackColor = true;
             this.rdPent.CheckedChanged += new System.EventHandler(this.rdCercle_CheckedChanged);
             // 
@@ -195,9 +230,9 @@
             this.rdRombes.Location = new System.Drawing.Point(302, 79);
             this.rdRombes.Margin = new System.Windows.Forms.Padding(4);
             this.rdRombes.Name = "rdRombes";
-            this.rdRombes.Size = new System.Drawing.Size(80, 20);
+            this.rdRombes.Size = new System.Drawing.Size(73, 20);
             this.rdRombes.TabIndex = 6;
-            this.rdRombes.Text = "Rombes";
+            this.rdRombes.Text = "Rombe";
             this.rdRombes.UseVisualStyleBackColor = true;
             this.rdRombes.CheckedChanged += new System.EventHandler(this.rdCercle_CheckedChanged);
             // 
@@ -282,7 +317,7 @@
             // btOK
             // 
             this.btOK.BackColor = System.Drawing.Color.LightGreen;
-            this.btOK.Location = new System.Drawing.Point(73, 451);
+            this.btOK.Location = new System.Drawing.Point(73, 511);
             this.btOK.Name = "btOK";
             this.btOK.Size = new System.Drawing.Size(122, 35);
             this.btOK.TabIndex = 5;
@@ -293,7 +328,7 @@
             // btCancel
             // 
             this.btCancel.BackColor = System.Drawing.Color.Crimson;
-            this.btCancel.Location = new System.Drawing.Point(289, 451);
+            this.btCancel.Location = new System.Drawing.Point(289, 511);
             this.btCancel.Name = "btCancel";
             this.btCancel.Size = new System.Drawing.Size(122, 35);
             this.btCancel.TabIndex = 6;
@@ -301,11 +336,42 @@
             this.btCancel.UseVisualStyleBackColor = false;
             this.btCancel.Click += new System.EventHandler(this.btCancel_Click);
             // 
+            // lbMida
+            // 
+            this.lbMida.AutoSize = true;
+            this.lbMida.Location = new System.Drawing.Point(46, 165);
+            this.lbMida.Name = "lbMida";
+            this.lbMida.Size = new System.Drawing.Size(40, 16);
+            this.lbMida.TabIndex = 8;
+            this.lbMida.Text = "Mida:";
+            // 
+            // nupMida
+            // 
+            this.nupMida.Location = new System.Drawing.Point(114, 159);
+            this.nupMida.Maximum = new decimal(new int[] {
+            250,
+            0,
+            0,
+            0});
+            this.nupMida.Minimum = new decimal(new int[] {
+            25,
+            0,
+            0,
+            0});
+            this.nupMida.Name = "nupMida";
+            this.nupMida.Size = new System.Drawing.Size(140, 22);
+            this.nupMida.TabIndex = 7;
+            this.nupMida.Value = new decimal(new int[] {
+            25,
+            0,
+            0,
+            0});
+            // 
             // FrmAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(495, 498);
+            this.ClientSize = new System.Drawing.Size(495, 558);
             this.Controls.Add(this.btCancel);
             this.Controls.Add(this.btOK);
             this.Controls.Add(this.gbGrup);
@@ -319,6 +385,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nUDAmplada)).EndInit();
             this.gbGrup.ResumeLayout(false);
             this.gbGrup.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nupMida)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -346,5 +413,7 @@
         private System.Windows.Forms.Button btCancel;
         private System.Windows.Forms.Label lbAlcada;
         private System.Windows.Forms.Label lbAmplada;
+        private System.Windows.Forms.Label lbMida;
+        private System.Windows.Forms.NumericUpDown nupMida;
     }
 }
