@@ -43,7 +43,7 @@ namespace M6Poligon.CLASSES
         private void dibuixarFigura()
         {
             posVertex = new Point((int)(posCentre.X - (mida / 2)), (int)(posCentre.Y - (mida / 2)));
-            pnl.Size = new Size(mida,mida);
+            pnl.Size = new Size(mida+5,mida+5);
             pnl.Location = posVertex;
             pnl.Paint += new PaintEventHandler(ferCercle);
             pnlPare.Controls.Add(pnl);

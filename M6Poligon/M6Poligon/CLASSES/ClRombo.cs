@@ -74,7 +74,7 @@ namespace M6Poligon.CLASSES
 
         private void dibuixarFigura()
         {
-            pnl.Size = new Size(ancho, altura);
+            pnl.Size = new Size(ancho+5, altura+5);
             pnl.Location = new Point(posCentre.X - ancho / 2, posCentre.Y - altura / 2);
             pnl.Paint += new PaintEventHandler(ferRombo);
             pnlPare.Controls.Add(pnl);
